@@ -3,12 +3,42 @@ import "./ArtPage.css";
 import React, { useState, useEffect, useRef } from 'react';
 
 function ArtPage() {
-  const ART_IMAGES = [
-    '/art/art1.png',
-    '/art/art2.png',
-    '/art/art3.png',
-    '/art/art4.png',
-    '/art/art5.png',
+  const ART_DATA = [
+    {
+      src: '/art/art1.png',
+      title: 'Piece 1',
+      materials: 'Mixed media',
+      measurements: '20x20',
+      description: 'Description of piece 1',
+    },
+    {
+      src: '/art/art2.png',
+      title: 'Piece 2',
+      materials: 'Mixed media',
+      measurements: '20x20',
+      description: 'Description of piece 2',
+    },
+    {
+      src: '/art/art3.png',
+      title: 'Piece 3',
+      materials: 'Mixed media',
+      measurements: '20x20',
+      description: 'Description of piece 3',
+    },
+    {
+      src: '/art/art4.png',
+      title: 'Piece 4',
+      materials: 'Mixed media',
+      measurements: '20x20',
+      description: 'Description of piece 4',
+    },
+    {
+      src: '/art/art5.png',
+      title: 'Piece 5',
+      materials: 'Mixed media',
+      measurements: '20x20',
+      description: 'Description of piece 5',
+    },
   ];
 
   const containerRef = useRef(null);
@@ -21,11 +51,11 @@ function ArtPage() {
     if (!container) return;
     const { width, height } = container.getBoundingClientRect();
 
-    const newImages = ART_IMAGES.map((src, index) => {
-      const w = 150 + Math.random() * 100;
+    const newImages = ART_DATA.map((info, index) => {
+      const w = 250 + Math.random() * 150;
       return {
         id: index,
-        src,
+        info,
         style: {
           left: Math.random() * (width - w),
           top: Math.random() * (height - w),
@@ -40,10 +70,11 @@ function ArtPage() {
   const handleMouseDown = (index) => (e) => {
     e.preventDefault();
     const img = images[index];
+    const container = containerRef.current.getBoundingClientRect();
     setDragState({
       index,
-      offsetX: e.clientX - img.style.left,
-      offsetY: e.clientY - img.style.top,
+      offsetX: e.clientX - container.left - img.style.left,
+      offsetY: e.clientY - container.top - img.style.top,
       moved: false,
     });
   };
@@ -67,7 +98,7 @@ function ArtPage() {
     const { index, moved } = dragState;
     setDragState(null);
     if (!moved) {
-      setSelectedImage(images[index].src);
+      setSelectedImage(images[index].info);
     }
   };
 
@@ -97,13 +128,21 @@ function ArtPage() {
             }}
             onMouseDown={handleMouseDown(idx)}
           >
-            <img src={img.src} alt="artwork" />
+            <img src={img.info.src} alt="artwork" />
           </div>
         ))}
       </div>
       {selectedImage && (
         <div className="overlay" onClick={closeImage}>
-          <img src={selectedImage} alt="full screen artwork" className="overlay-image" />
+          <div className="overlay-content">
+            <img src={selectedImage.src} alt={selectedImage.title} className="overlay-image" />
+            <div className="overlay-details">
+              <h3>{selectedImage.title}</h3>
+              <p>{selectedImage.materials}</p>
+              <p>{selectedImage.measurements}</p>
+              <p>{selectedImage.description}</p>
+            </div>
+          </div>
         </div>
       )}
     </div>
