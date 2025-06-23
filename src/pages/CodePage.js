@@ -13,8 +13,8 @@ const projects = [
     repo: "https://github.com/liamkernan/MarchMadness",
   },
     {
-        title: "Small Projects",
-        repo: "https://github.com/liamkernan/SmallProjects",
+        title: "helpstudy.me",
+        repo: "https://github.com/liamkernan/HELPSTUDYME",
         live: "https://helpstudy.me"
     }
 ];
