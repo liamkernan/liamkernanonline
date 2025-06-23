@@ -6,3 +6,9 @@
   height: 100vh;
   text-align: center;
 }
+
+.bio-text {
+  max-width: 600px;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
