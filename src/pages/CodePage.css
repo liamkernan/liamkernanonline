@@ -12,10 +12,10 @@
   align-items: center;
   justify-content: center;
   width: 200px;
-  height: 150px;
-  border: 1px solid #ccc;
+  height: 250px;
+  border: 4px solid #ccc;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 
 .project-card h3 {

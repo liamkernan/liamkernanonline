@@ -4,15 +4,19 @@ import React from 'react';
 
 const projects = [
   {
-    title: "Portfolio Website",
-    repo: "https://github.com/example/portfolio",
-    live: "https://example.com"
+    title: "helpstudy.me",
+    repo: "https://github.com/liamkernan/HELPSTUDYME",
+    live: "https://helpstudy.me"
   },
   {
-    title: "Sample App",
-    repo: "https://github.com/example/sample-app",
-    live: "https://sample.example.com"
-  }
+    title: "March Madness",
+    repo: "https://github.com/liamkernan/MarchMadness",
+  },
+    {
+        title: "Small Projects",
+        repo: "https://github.com/liamkernan/SmallProjects",
+        live: "https://helpstudy.me"
+    }
 ];
 
 function CodePage() {

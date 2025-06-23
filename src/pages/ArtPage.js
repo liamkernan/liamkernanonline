@@ -4,11 +4,17 @@ import React, { useState, useEffect, useRef } from 'react';
 
 function ArtPage() {
   const ART_IMAGES = [
-    '/art/art1.png',
-    '/art/art2.png',
-    '/art/art3.png',
-    '/art/art4.png',
-    '/art/art5.png',
+    '/art/1, oil on canvas, 16x20, 2024.jpg',
+    '/art/2, oil on canvas, 24x18, 2025.png',
+    '/art/3, acrylic on canvas, 16x20, 2024.jpg',
+    '/art/4, charcoal wash on paper, 16x24, 2025.jpg',
+    '/art/5, pastel on paper, 20x15, 2025.jpg',
+    '/art/6, colored pencil on paper, 20x25, 2025.jpg',
+    '/art/7, pastel on paper, 20x15, 2025.jpg',
+    '/art/8, charcoal on paper, 23x25, 2025.jpg',
+    '/art/9, white charcoal on black, 19x26, 2025.jpg',
+    '/art/10, acrylic on box canvas, 20x16, 2025.png',
+    '/art/11, acrylic on box canvas, 20x16, 2025.png',
   ];
 
   const containerRef = useRef(null);
