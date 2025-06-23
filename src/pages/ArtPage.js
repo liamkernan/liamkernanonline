@@ -1,33 +1,74 @@
 import "./PageStyles.css";
 import "./ArtPage.css";
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 function ArtPage() {
+  const ART_IMAGES = [
+    '/art/art1.png',
+    '/art/art2.png',
+    '/art/art3.png',
+    '/art/art4.png',
+    '/art/art5.png',
+  ];
+
+  const containerRef = useRef(null);
   const [images, setImages] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [dragState, setDragState] = useState(null);
 
-  const handleUpload = (event) => {
-    const files = Array.from(event.target.files);
-    const newImages = files.map((file) => {
-      const src = URL.createObjectURL(file);
-      const width = 150 + Math.random() * 100;
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    const { width, height } = container.getBoundingClientRect();
+
+    const newImages = ART_IMAGES.map((src, index) => {
+      const w = 150 + Math.random() * 100;
       return {
-        id: src,
+        id: index,
         src,
         style: {
-          left: Math.random() * 80 + "%",
-          top: Math.random() * 80 + "%",
-          transform: `rotate(${Math.random() * 60 - 30}deg)`,
+          left: Math.random() * (width - w),
+          top: Math.random() * (height - w),
           zIndex: Math.floor(Math.random() * 10),
-          width: width + "px",
+          width: w,
         },
       };
     });
-    setImages((prev) => [...prev, ...newImages]);
+    setImages(newImages);
+  }, []);
+
+  const handleMouseDown = (index) => (e) => {
+    e.preventDefault();
+    const img = images[index];
+    setDragState({
+      index,
+      offsetX: e.clientX - img.style.left,
+      offsetY: e.clientY - img.style.top,
+      moved: false,
+    });
   };
 
-  const openImage = (src) => {
-    setSelectedImage(src);
+  const handleMouseMove = (e) => {
+    if (!dragState) return;
+    const { index, offsetX, offsetY } = dragState;
+    const container = containerRef.current.getBoundingClientRect();
+    const left = e.clientX - container.left - offsetX;
+    const top = e.clientY - container.top - offsetY;
+    setImages((imgs) => {
+      const arr = [...imgs];
+      arr[index] = { ...arr[index], style: { ...arr[index].style, left, top } };
+      return arr;
+    });
+    setDragState({ ...dragState, moved: true });
+  };
+
+  const handleMouseUp = () => {
+    if (!dragState) return;
+    const { index, moved } = dragState;
+    setDragState(null);
+    if (!moved) {
+      setSelectedImage(images[index].src);
+    }
   };
 
   const closeImage = () => {
@@ -37,14 +78,24 @@ function ArtPage() {
   return (
     <div className="art-page">
       <h2>Art</h2>
-      <input type="file" accept="image/*" multiple onChange={handleUpload} />
-      <div className="art-container">
-        {images.map((img) => (
+      <div
+        className="art-container"
+        ref={containerRef}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+      >
+        {images.map((img, idx) => (
           <div
             key={img.id}
             className="art-image-box"
-            style={img.style}
-            onClick={() => openImage(img.src)}
+            style={{
+              left: img.style.left,
+              top: img.style.top,
+              zIndex: img.style.zIndex,
+              width: img.style.width,
+              position: 'absolute',
+            }}
+            onMouseDown={handleMouseDown(idx)}
           >
             <img src={img.src} alt="artwork" />
           </div>
