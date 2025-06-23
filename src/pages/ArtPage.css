@@ -9,11 +9,13 @@
   position: relative;
   width: 100%;
   height: 80vh;
+  touch-action: none;
 }
 
 .art-image-box {
   position: absolute;
-  cursor: pointer;
+  cursor: grab;
+  user-select: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
