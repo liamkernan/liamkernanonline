@@ -10,11 +10,12 @@
 
 .site-title {
   margin-bottom: 2rem;
+  font-size: 4rem;
 }
 
 .landing-nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
 }
 
