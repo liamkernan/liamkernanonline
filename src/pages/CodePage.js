@@ -13,16 +13,15 @@ const projects = [
     repo: "https://github.com/liamkernan/MarchMadness",
   },
     {
-        title: "helpstudy.me",
-        repo: "https://github.com/liamkernan/HELPSTUDYME",
-        live: "https://helpstudy.me"
+        title: "Small Projects",
+        repo: "https://github.com/liamkernan/SmallProjects",
     }
 ];
 
 function CodePage() {
   return (
     <div className="page-container">
-      <h2>Code</h2>
+      <h1>Code</h1>
       <div className="projects-grid">
         {projects.map((project) => (
           <div key={project.title} className="project-card">
