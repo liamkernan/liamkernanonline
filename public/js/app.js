@@ -1,34 +1,35 @@
-const App = () => {
-  const year = new Date().getFullYear();
-  return (
-    <div className="p-4 max-w-3xl mx-auto">
-      <header className="text-center mb-8">
-        <h1 className="text-4xl font-bold">Liam Kernan</h1>
-        <p className="text-gray-600">Developer & Artist</p>
-      </header>
-      <section id="bio" className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">About Me</h2>
-        <p>Hi! I'm Liam, a developer and artist passionate about building cool stuff.</p>
-      </section>
-      <section id="projects" className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">Projects</h2>
-        <ul className="list-disc list-inside">
-          <li><a href="https://github.com/liamkernan/project1" className="text-blue-600 hover:underline">Project 1</a></li>
-          <li><a href="https://github.com/liamkernan/project2" className="text-blue-600 hover:underline">Project 2</a></li>
-        </ul>
-      </section>
-      <section id="gallery" className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">Art Gallery</h2>
-        <div className="grid grid-cols-2 gap-4">
-          <img src="https://via.placeholder.com/300x200?text=Art+1" alt="Art 1" className="rounded shadow" />
-          <img src="https://via.placeholder.com/300x200?text=Art+2" alt="Art 2" className="rounded shadow" />
-        </div>
-      </section>
-      <footer className="text-center text-gray-500">
-        <p>© {year} Liam Kernan</p>
-      </footer>
-    </div>
-  );
-};
+const { BrowserRouter, Routes, Route, Link } = ReactRouterDOM;
+
+const Landing = () => (
+  <div className="flex flex-col items-center justify-center min-h-screen -mt-20">
+    <h1 className="text-5xl font-bold mb-12">Liam Kernan</h1>
+    <nav className="space-y-4 text-2xl">
+      <Link to="/code" className="px-4 py-2 border border-transparent hover:border-gray-800">Code</Link>
+      <Link to="/art" className="px-4 py-2 border border-transparent hover:border-gray-800">Art</Link>
+      <Link to="/production" className="px-4 py-2 border border-transparent hover:border-gray-800">Production</Link>
+      <Link to="/personal" className="px-4 py-2 border border-transparent hover:border-gray-800">Personal</Link>
+    </nav>
+  </div>
+);
+
+const Page = ({ title }) => (
+  <div className="p-4">
+    <h1 className="text-3xl font-bold mb-4">{title}</h1>
+    <p>Content coming soon.</p>
+    <Link to="/" className="text-blue-600 hover:underline">Back</Link>
+  </div>
+);
+
+const App = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/code" element={<Page title="Code" />} />
+      <Route path="/art" element={<Page title="Art" />} />
+      <Route path="/production" element={<Page title="Production" />} />
+      <Route path="/personal" element={<Page title="Personal" />} />
+    </Routes>
+  </BrowserRouter>
+);
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);
