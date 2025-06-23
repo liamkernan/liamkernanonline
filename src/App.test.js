@@ -1,13 +1,14 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import App from './App';
+
+jest.mock('react-router-dom', () => ({
+  Link: ({ children, ...props }) => <a {...props}>{children}</a>
+}), { virtual: true });
+
+import LandingPage from './pages/LandingPage';
 
 test('renders landing page text', () => {
-  render(
-    <MemoryRouter>
-      <App />
-    </MemoryRouter>
-  );
+  render(<LandingPage />);
   const heading = screen.getByText(/Liam Kernan/i);
   expect(heading).toBeInTheDocument();
 });
