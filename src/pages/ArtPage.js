@@ -59,6 +59,17 @@ function ArtPage() {
     e.preventDefault();
     const img = images[index];
     const container = containerRef.current.getBoundingClientRect();
+
+    // Bring the clicked image to the top layer
+    setImages((imgs) => {
+      const maxZ = Math.max(...imgs.map((im) => im.style.zIndex || 0));
+      const arr = [...imgs];
+      arr[index] = {
+        ...arr[index],
+        style: { ...arr[index].style, zIndex: maxZ + 1 },
+      };
+      return arr;
+    });
     setDragState({
       index,
       offsetX: e.clientX - container.left - img.style.left,
