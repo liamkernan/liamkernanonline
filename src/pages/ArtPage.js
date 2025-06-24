@@ -52,6 +52,46 @@ function ArtPage() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [dragState, setDragState] = useState(null);
 
+  const groupings = [
+    [0, 1],
+    [2, 3],
+    [4, 5, 6],
+    [7, 8],
+    [9, 10],
+  ];
+
+  const arrangePairs = () => {
+    const container = containerRef.current.getBoundingClientRect();
+    const margin = 10;
+    const rowHeight = 420;
+
+    setImages((imgs) => {
+      const arr = [...imgs];
+      let y = margin;
+
+      groupings.forEach((group) => {
+        const totalWidth = group.reduce(
+          (sum, idx) => sum + arr[idx].style.width,
+          0
+        ) + margin * (group.length - 1);
+        let x = Math.max(margin, (container.width - totalWidth) / 2);
+
+        group.forEach((idx) => {
+          const imgWidth = arr[idx].style.width;
+          arr[idx] = {
+            ...arr[idx],
+            style: { ...arr[idx].style, left: x, top: y },
+          };
+          x += imgWidth + margin;
+        });
+
+        y += rowHeight + margin;
+      });
+
+      return arr;
+    });
+  };
+
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -125,6 +165,7 @@ function ArtPage() {
   return (
     <div className="art-page">
       <h2>Art</h2>
+      <button className="arrange-button" onClick={arrangePairs}>Intended Pairs</button>
       <div
         className="art-container"
         ref={containerRef}
