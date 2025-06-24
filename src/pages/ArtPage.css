@@ -31,26 +31,66 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 999;
 }
 
-.overlay-image {
-  max-width: 90vw;
+.overlay-content {
+  display: flex;
+  max-width: 95vw;
   max-height: 90vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.overlay-content {
-  text-align: center;
-  color: #fff;
+.overlay-image {
+  flex: 1;
+  max-width: 70%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .overlay-details {
-  margin-top: 1rem;
+  flex: 0 0 300px;
+  padding: 2rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: rgba(0, 0, 0, 0.95);
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.overlay-details h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.overlay-details p {
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .overlay-content {
+    flex-direction: column;
+    max-height: 95vh;
+  }
+  
+  .overlay-image {
+    max-width: 100%;
+    max-height: 60vh;
+  }
+  
+  .overlay-details {
+    flex: none;
+    padding: 1rem;
+  }
 }
