@@ -63,29 +63,55 @@ function ArtPage() {
   const arrangePairs = () => {
     const container = containerRef.current.getBoundingClientRect();
     const margin = 10;
-    const rowHeight = 420;
+    const imgWidth = 200; // fixed width so all pairs fit on screen
+    const rowHeight = 220;
 
     setImages((imgs) => {
       const arr = [...imgs];
-      let y = margin;
 
-      groupings.forEach((group) => {
-        const totalWidth = group.reduce(
-          (sum, idx) => sum + arr[idx].style.width,
-          0
-        ) + margin * (group.length - 1);
-        let x = Math.max(margin, (container.width - totalWidth) / 2);
+      groupings.forEach((group, i) => {
+        const groupWidth =
+          imgWidth * group.length + margin * (group.length - 1);
+
+        let x = margin;
+        let y = margin;
+        switch (i) {
+          case 0: // top left
+            x = margin;
+            y = margin;
+            break;
+          case 1: // top right
+            x = container.width - groupWidth - margin;
+            y = margin;
+            break;
+          case 2: // middle
+            x = (container.width - groupWidth) / 2;
+            y = container.height / 2 - rowHeight / 2;
+            break;
+          case 3: // bottom right
+            x = container.width - groupWidth - margin;
+            y = container.height - rowHeight - margin;
+            break;
+          case 4: // bottom left
+            x = margin;
+            y = container.height - rowHeight - margin;
+            break;
+          default:
+            break;
+        }
 
         group.forEach((idx) => {
-          const imgWidth = arr[idx].style.width;
           arr[idx] = {
             ...arr[idx],
-            style: { ...arr[idx].style, left: x, top: y },
+            style: {
+              ...arr[idx].style,
+              left: x,
+              top: y,
+              width: imgWidth,
+            },
           };
           x += imgWidth + margin;
         });
-
-        y += rowHeight + margin;
       });
 
       return arr;
