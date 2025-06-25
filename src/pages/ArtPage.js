@@ -17,6 +17,13 @@ function ArtPage() {
     '/art/11, acrylic on box canvas, 20x16, 2025.png',
   ];
 
+  const ART_PAIR_FILES = [
+    '/art/part1.png',
+     '/art/part2.png',
+     '/art/part3.png',
+     '/art/part4.png',
+  ];
+
   const ART_IMAGES = ART_FILES.map((src, index) => {
     const nameString = src.split('/').pop().replace(/\.[^/.]+$/, '');
     const parts = nameString.split(',').map((s) => s.trim());
