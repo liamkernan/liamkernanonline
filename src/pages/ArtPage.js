@@ -53,10 +53,21 @@ function ArtPage() {
     };
   });
 
+  const ART_PAIR_IMAGES = ART_PAIR_FILES.map((src, index) => ({
+    id: `pair-${index}`,
+    src,
+    title: '',
+    materials: '',
+    size: '',
+    year: '',
+    description: '',
+  }));
+
   const containerRef = useRef(null);
   const [images, setImages] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
   const [dragState, setDragState] = useState(null);
+  const [isPairView, setIsPairView] = useState(false);
 
   const groupings = [
     [0, 1],
@@ -65,6 +76,25 @@ function ArtPage() {
     [7, 8],
     [9, 10],
   ];
+
+  const scrambleFromSource = (source) => {
+    const container = containerRef.current;
+    if (!container) return [];
+    const { width, height } = container.getBoundingClientRect();
+
+    return source.map((img) => {
+      const w = 250 + Math.random() * 150;
+      return {
+        ...img,
+        style: {
+          left: Math.random() * (width - w),
+          top: Math.random() * (height - w),
+          zIndex: Math.floor(Math.random() * 10),
+          width: w,
+        },
+      };
+    });
+  };
 
   const arrangePairs = () => {
     const container = containerRef.current.getBoundingClientRect();
@@ -125,24 +155,19 @@ function ArtPage() {
   };
 
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-    const { width, height } = container.getBoundingClientRect();
-
-    const newImages = ART_IMAGES.map((img) => {
-      const w = 250 + Math.random() * 150;
-      return {
-        ...img,
-        style: {
-          left: Math.random() * (width - w),
-          top: Math.random() * (height - w),
-          zIndex: Math.floor(Math.random() * 10),
-          width: w,
-        },
-      };
-    });
-    setImages(newImages);
+    setImages(scrambleFromSource(ART_IMAGES));
   }, []);
+
+  const togglePairs = () => {
+    if (isPairView) {
+      setImages(scrambleFromSource(ART_IMAGES));
+      setIsPairView(false);
+    } else {
+      setImages(scrambleFromSource(ART_PAIR_IMAGES));
+      setIsPairView(true);
+    }
+    setSelectedImage(null);
+  };
 
   const handleMouseDown = (index) => (e) => {
     e.preventDefault();
@@ -197,7 +222,9 @@ function ArtPage() {
   return (
     <div className="art-page">
       <h2>Art</h2>
-      <button className="arrange-button" onClick={arrangePairs}>Intended Pairs</button>
+        <button className="arrange-button" onClick={togglePairs}>
+          {isPairView ? 'Scramble' : 'Intended Pairs'}
+        </button>
       <div
         className="art-container"
         ref={containerRef}
