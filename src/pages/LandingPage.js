@@ -10,7 +10,7 @@ function LandingPage() {
         <Link to="/code" className="nav-button">Code</Link>
         <Link to="/art" className="nav-button">Art</Link>
         <Link to="/production" className="nav-button">test</Link>
-        <Link to="/personal" className="nav-button">Personal</Link>
+        <Link to="/personal" className="nav-button">Me</Link>
       </nav>
     </div>
   );
