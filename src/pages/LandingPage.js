@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SocialButtons from '../components/SocialButtons';
 import './LandingPage.css';
 
 function LandingPage() {
@@ -9,9 +10,11 @@ function LandingPage() {
       <nav className="landing-nav">
         <Link to="/code" className="nav-button">Code</Link>
         <Link to="/art" className="nav-button">Art</Link>
-        <Link to="/production" className="nav-button">test</Link>
+        <Link to="/production" className="nav-button">Production</Link>
         <Link to="/personal" className="nav-button">Me</Link>
       </nav>
+      
+      <SocialButtons />
     </div>
   );
 }

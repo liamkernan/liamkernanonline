@@ -1,6 +1,7 @@
 import "./PageStyles.css";
 import "./ArtPage.css";
 import React, { useState, useEffect, useRef } from 'react';
+import BackButton from '../components/BackButton';
 
 function ArtPage() {
   const ART_FILES = [
@@ -15,6 +16,8 @@ function ArtPage() {
     '/art/9, white charcoal on black, 19x26, 2025.jpg',
     '/art/10, acrylic on box canvas, 20x16, 2025.png',
     '/art/11, acrylic on box canvas, 20x16, 2025.png',
+      '/art/selected 1, charcoal wash on paper, 22x30, 2024.png',
+      '/art/selected 2, oil on canvas, 16x20, 2024.png'
   ];
 
   const ART_PAIR_FILES = [
@@ -22,12 +25,29 @@ function ArtPage() {
      '/art/part2.png',
      '/art/part3.png',
      '/art/part4.png',
+      '/art/part5.png'
   ];
 
   const ART_IMAGES = ART_FILES.map((src, index) => {
     const nameString = src.split('/').pop().replace(/\.[^/.]+$/, '');
     const parts = nameString.split(',').map((s) => s.trim());
-    
+
+    const titles = {
+      0: "remains of true beauty still exist in what humans have altered",
+      1: "the true beauty in question",
+      2: "the widow",
+      3: "her everything",
+      4: "beginning of life;",
+      5: "vision board;",
+      6: "conclusion of life.",
+      7: "Imposter",
+      8: "Home Invasion",
+      9: "HUNGOVER",
+      10: "FOLLOW THE CROSS",
+      11: "Big Sky, Montana",
+      12: "Morgan, Utah"
+    };
+
     const descriptions = {
       0: "This is the first piece in my Sleep & Dreams series, that I started back in August, and completely overhauled in December when I had more clarity on what I wanted my series to represent.  While this piece was challenging to complete and took me longer then it probably should have, i'm glad I completed it, because it gave me so much clarity on what I want to make and how I want to go about pairs in the future. In terms of the theme, this one falls on the \"dream\" side. I tried to blend surrealist elements and application with a realistic and typically uneventful scene, to make a piece that you could stare at endlessly and still have questions. It's a fun challange to use no refrences and completely conjure your peice from your imgination. It can hurt the proportions, sure, but I really think it adds a unreplicatable and personal touch to the whole piece. Like the fact this place, or the form of any of these objects, does not exist anywhere in the real world. I should probably explain why the figures and giraffe are blacked out. Its meant to represent how when you try to think back and remember a dream, there are always aspects of your dreams that feel like they're incomplete or missing. That aspect - the part that just doesn't quite make sense - is seemingly a constant in everyones dreams. The figure laying on the ground is having a heat stroke from the oppresive and vsicreal sky above him. I wanted this peice to just feel off in a way that only a bizzare dream could. I think I could've added more detail to the building in the background, and the proportions of the cage could have been planned better, but overall im very happy with this piece, and the tone it sets for my sustained investigation.",
       1: "This piece the counterpart to my first sustained, forming the first \"pair\" in my series of pairs. With this project I wanted to take the color palette and general aesthetic of the first piece, but fully focus on a more realistic and delicate scenery to juxtapose the stranger and more unrelenting of the first. I'm really happy with how the lines of color form the ground at the bottom of the piece, and the shifts in color and warmth. The upper portion of the trees was initially a challenger, because I wasn't sure how bold I wanted to go on the color, but i'm very happy with how they came out and stand against the paler lower portion of the sky. Speaking on the sky, I intially had a much more saturated and vertically-blending sky, but I changed this to be radially-blending and have a more gradual and less agressive pallete (esapically towards the bottom). I think this goes a long way in making the piece feel less overwhelming, and highlights the centered tree's color.",
@@ -45,7 +65,7 @@ function ArtPage() {
     return {
       id: index,
       src,
-      title: `${parts[0]}`,
+      title: titles[index] || '',
       materials: parts[1] || '',
       size: parts[2] || '',
       year: parts[3] || '',
@@ -221,10 +241,13 @@ function ArtPage() {
 
   return (
     <div className="art-page">
-      <h2>Art</h2>
-        <button className="arrange-button" onClick={togglePairs}>
-          {isPairView ? 'Scramble' : 'Intended Pairs'}
-        </button>
+      <BackButton />
+      <h2 className="text-center text-8xl">art</h2>
+        {!selectedImage && (
+          <button className="arrange-button" onClick={togglePairs}>
+            {isPairView ? 'Intended View' : 'Pair View'}
+          </button>
+        )}
       <div
         className="art-container"
         ref={containerRef}
@@ -250,15 +273,17 @@ function ArtPage() {
       </div>
       {selectedImage && (
         <div className="overlay" onClick={closeImage}>
-          <div className="overlay-content" onClick={(e) => e.stopPropagation()}>
+          <div className={`overlay-content ${!selectedImage.title ? 'image-only' : ''}`} onClick={(e) => e.stopPropagation()}>
             <img src={selectedImage.src} alt={selectedImage.title} className="overlay-image" />
-            <div className="overlay-details">
-              <h3>{selectedImage.title}</h3>
-              <p>{selectedImage.materials}</p>
-              <p>{selectedImage.size}</p>
-              <p>{selectedImage.year}</p>
-              {selectedImage.description && <p>{selectedImage.description}</p>}
-            </div>
+            {selectedImage.title && (
+              <div className="overlay-details">
+                <h3>{selectedImage.title}</h3>
+                <p>{selectedImage.materials}</p>
+                <p>{selectedImage.size}</p>
+                <p>{selectedImage.year}</p>
+                {selectedImage.description && <p><i>{selectedImage.description}</i></p>}
+              </div>
+            )}
           </div>
         </div>
       )}

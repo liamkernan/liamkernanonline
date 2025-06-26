@@ -1,6 +1,7 @@
 import "./PageStyles.css";
 import "./ProductionPage.css";
 import React from 'react';
+import BackButton from '../components/BackButton';
 
 // A fixed list of example files to mimic a file explorer. No uploads allowed.
 const entries = [
@@ -13,6 +14,7 @@ function ProductionPage() {
 
   return (
     <div className="page-container">
+      <BackButton />
       <h2>Production</h2>
       <div className="file-explorer">
         {entries.map((entry) => (
