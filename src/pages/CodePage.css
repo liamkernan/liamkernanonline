@@ -1,3 +1,15 @@
+.page-container h2 {
+  position: absolute;
+  top: 0.001rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  margin: 0;
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+}
+
 .projects-grid {
   display: flex;
   flex-wrap: wrap;
