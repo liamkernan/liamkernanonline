@@ -25,7 +25,8 @@ function ArtPage() {
      '/art/part2.png',
      '/art/part3.png',
      '/art/part4.png',
-      '/art/part5.png'
+      '/art/part5.png',
+      '/art/selectedpair.png'
   ];
 
   const ART_IMAGES = ART_FILES.map((src, index) => {
@@ -95,7 +96,24 @@ function ArtPage() {
     [4, 5, 6],
     [7, 8],
     [9, 10],
+    [11, 12]
   ];
+
+  const pairMappings = {
+    0: '/art/part2.png',
+    1: '/art/part2.png',
+    2: '/art/part1.png',
+    3: '/art/part1.png',
+    4: '/art/part3.png',
+    5: '/art/part3.png',
+    6: '/art/part3.png',
+    7: '/art/part4.png',
+    8: '/art/part4.png',
+    9: '/art/part5.png',
+    10: '/art/part5.png',
+    11: '/art/selectedpair.png',
+    12: '/art/selectedpair.png'
+  };
 
   const scrambleFromSource = (source) => {
     const container = containerRef.current;
@@ -178,15 +196,23 @@ function ArtPage() {
     setImages(scrambleFromSource(ART_IMAGES));
   }, []);
 
-  const togglePairs = () => {
-    if (isPairView) {
-      setImages(scrambleFromSource(ART_IMAGES));
-      setIsPairView(false);
-    } else {
-      setImages(scrambleFromSource(ART_PAIR_IMAGES));
-      setIsPairView(true);
-    }
+  const toggleView = () => {
+    setIsPairView(!isPairView);
     setSelectedImage(null);
+  };
+
+  const showPairImage = (pieceIndex) => {
+    const pairImageSrc = pairMappings[pieceIndex];
+    if (pairImageSrc) {
+      setSelectedImage({
+        src: pairImageSrc,
+        title: '',
+        materials: '',
+        size: '',
+        year: '',
+        description: ''
+      });
+    }
   };
 
   const handleMouseDown = (index) => (e) => {
@@ -244,33 +270,68 @@ function ArtPage() {
       <BackButton />
       <h2 className="text-center text-8xl">art</h2>
         {!selectedImage && (
-          <button className="arrange-button" onClick={togglePairs}>
-            {isPairView ? 'Intended View' : 'Pair View'}
+          <button className="arrange-button" onClick={toggleView}>
+            {isPairView ? 'Intended View' : 'Organized View'}
           </button>
         )}
-      <div
-        className="art-container"
-        ref={containerRef}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-      >
-        {images.map((img, idx) => (
-          <div
-            key={img.id}
-            className="art-image-box"
-            style={{
-              left: img.style.left,
-              top: img.style.top,
-              zIndex: img.style.zIndex,
-              width: img.style.width,
-              position: 'absolute',
-            }}
-            onMouseDown={handleMouseDown(idx)}
-          >
-            <img src={img.src} alt={img.title} />
-          </div>
-        ))}
-      </div>
+
+      {isPairView ? (
+        <div className="organized-view">
+          {ART_IMAGES.map((artwork, index) => (
+            <div key={artwork.id} className="artwork-row">
+              <div className="artwork-image-container">
+                <img 
+                  src={artwork.src} 
+                  alt={artwork.title}
+                  className="artwork-image"
+                  onClick={() => setSelectedImage(artwork)}
+                />
+              </div>
+              <div className="artwork-details">
+                <div className="artwork-content">
+                  <h3 className="artwork-title">{artwork.title}</h3>
+                  <p className="artwork-info">{artwork.materials}</p>
+                  <p className="artwork-info">{artwork.size}</p>
+                  <p className="artwork-info">{artwork.year}</p>
+                  {artwork.description && (
+                    <p className="artwork-description">{artwork.description}</p>
+                  )}
+                </div>
+                <button 
+                  className="show-pair-button"
+                  onClick={() => showPairImage(index)}
+                >
+                  Show Pair
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div
+          className="art-container"
+          ref={containerRef}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+        >
+          {images.map((img, idx) => (
+            <div
+              key={img.id}
+              className="art-image-box"
+              style={{
+                left: img.style.left,
+                top: img.style.top,
+                zIndex: img.style.zIndex,
+                width: img.style.width,
+                position: 'absolute',
+              }}
+              onMouseDown={handleMouseDown(idx)}
+            >
+              <img src={img.src} alt={img.title} />
+            </div>
+          ))}
+        </div>
+      )}
       {selectedImage && (
         <div className="overlay" onClick={closeImage}>
           <div className={`overlay-content ${!selectedImage.title ? 'image-only' : ''}`} onClick={(e) => e.stopPropagation()}>
