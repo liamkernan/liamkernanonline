@@ -40,7 +40,7 @@ function ArtPage() {
       3: "her everything",
       4: "beginning of life;",
       5: "vision board;",
-      6: "conclusion of life.",
+      6: "conclusion of life;",
       7: "Imposter",
       8: "Home Invasion",
       9: "HUNGOVER",
@@ -59,8 +59,8 @@ function ArtPage() {
       6: "This third piece in my tryptic is a mini-series of sorts within my broader sustained investigation, sleep & dreams. I wanted to depict sleep at the beginning of life, sleep at the end of life, and then curate a collage of contrasting “dreams” within one piece to show the overlap and similarities of dreams (and nightmares) across your life. All three are meant to be viewed together as one, and are sort of the exception to my rule of pairs. However, I think they can still be appreciated independently. I'm really happy with how this came together. I'm particularly happy with the form of the pastel portraits, and the colored-pencil collage piece in the middle is one of my favorite dream sequences i've done. I'm going to make the warm tones in the end of life piece more distinct, and make the collage more dense, but I think this will serve as another interesting perspective on the relationship of dreams and sleep.",
       7: "I feel like this duo is easily my most morbid and dark yet. Stylistically, it felt like a total departure from my typically very colorful and saturated style, which is a change im very glad I made for two reasons. One, it gives my portfolio more variety, and two, it feel like a more comprehensive outlook on the relationship between sleep and dreams for a larger variety of people. I think it's important to fully recognize concepts and not only include the \"good\", and in this context that means recognizing nightmares and paralysis. I think I can still improve some aspects of the perspective, but overall I understand the strength of this piece is the reaction it elicits and im trying to capitalize on that.",
       8: "I feel like this duo is easily my most morbid and dark yet. Stylistically, it felt like a total departure from my typically very colorful and saturated style, which is a change im very glad I made for two reasons. One, it gives my portfolio more variety, and two, it feel like a more comprehensive outlook on the relationship between sleep and dreams for a larger variety of people. I think it's important to fully recognize concepts and not only include the \"good\", and in this context that means recognizing nightmares and paralysis. Im really happy with the composition and uncomfortable aire that floats in this one, but im definitely gonna take steps to improve the detail and quality of drawing.",
-      9: "Textured canvas adds depth to this abstract exploration.",
-      10: "Companion piece exploring similar themes with varied technique.",
+      9: "",
+      10: "",
     };
     
     return {
@@ -89,6 +89,11 @@ function ArtPage() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [dragState, setDragState] = useState(null);
   const [isPairView, setIsPairView] = useState(false);
+  const [zoomLevel, setZoomLevel] = useState(1);
+  const [panX, setPanX] = useState(0);
+  const [panY, setPanY] = useState(0);
+  const [isPanning, setIsPanning] = useState(false);
+  const [panStart, setPanStart] = useState({ x: 0, y: 0 });
 
   const groupings = [
     [0, 1],
@@ -263,6 +268,74 @@ function ArtPage() {
 
   const closeImage = () => {
     setSelectedImage(null);
+    setZoomLevel(1);
+    setPanX(0);
+    setPanY(0);
+    setIsPanning(false);
+  };
+
+  const zoomIn = () => {
+    setZoomLevel(prev => Math.min(prev + 0.25, 3));
+  };
+
+  const zoomOut = () => {
+    setZoomLevel(prev => {
+      const newZoom = Math.max(prev - 0.25, 0.25);
+      if (newZoom <= 1) {
+        setPanX(0);
+        setPanY(0);
+      }
+      return newZoom;
+    });
+  };
+
+  const handleImageMouseDown = (e) => {
+    if (zoomLevel > 1) {
+      e.preventDefault();
+      setIsPanning(true);
+      setPanStart({
+        x: e.clientX - panX,
+        y: e.clientY - panY
+      });
+    }
+  };
+
+  const handleImageMouseMove = (e) => {
+    if (isPanning && zoomLevel > 1) {
+      e.preventDefault();
+      setPanX(e.clientX - panStart.x);
+      setPanY(e.clientY - panStart.y);
+    }
+  };
+
+  const handleImageMouseUp = () => {
+    setIsPanning(false);
+  };
+
+  // Touch events for mobile
+  const handleImageTouchStart = (e) => {
+    if (zoomLevel > 1) {
+      e.preventDefault();
+      const touch = e.touches[0];
+      setIsPanning(true);
+      setPanStart({
+        x: touch.clientX - panX,
+        y: touch.clientY - panY
+      });
+    }
+  };
+
+  const handleImageTouchMove = (e) => {
+    if (isPanning && zoomLevel > 1) {
+      e.preventDefault();
+      const touch = e.touches[0];
+      setPanX(touch.clientX - panStart.x);
+      setPanY(touch.clientY - panStart.y);
+    }
+  };
+
+  const handleImageTouchEnd = () => {
+    setIsPanning(false);
   };
 
   return (
@@ -334,22 +407,46 @@ function ArtPage() {
       )}
       {selectedImage && (
         <div className="overlay" onClick={closeImage}>
-          <div className={`overlay-content ${!selectedImage.title ? 'image-only' : ''}`} onClick={(e) => e.stopPropagation()}>
+          <div className="overlay-content fullscreen-only">
             <button className="close-button" onClick={closeImage}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
                 <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
               </svg>
             </button>
-            <img src={selectedImage.src} alt={selectedImage.title} className="overlay-image" />
-            {selectedImage.title && (
-              <div className="overlay-details">
-                <h3>{selectedImage.title}</h3>
-                <p>{selectedImage.materials}</p>
-                <p>{selectedImage.size}</p>
-                <p>{selectedImage.year}</p>
-                {selectedImage.description && <p><i>{selectedImage.description}</i></p>}
-              </div>
-            )}
+            <div 
+              className="image-container"
+              onMouseMove={handleImageMouseMove}
+              onMouseUp={handleImageMouseUp}
+              onMouseLeave={handleImageMouseUp}
+            >
+              <img 
+                src={selectedImage.src} 
+                alt={selectedImage.title} 
+                className="overlay-image" 
+                style={{ 
+                  transform: `scale(${zoomLevel}) translate(${panX / zoomLevel}px, ${panY / zoomLevel}px)`,
+                  cursor: zoomLevel > 1 ? (isPanning ? 'grabbing' : 'grab') : 'default'
+                }}
+                onMouseDown={handleImageMouseDown}
+                onTouchStart={handleImageTouchStart}
+                onTouchMove={handleImageTouchMove}
+                onTouchEnd={handleImageTouchEnd}
+                onClick={(e) => e.stopPropagation()}
+                draggable={false}
+              />
+            </div>
+            <div className="zoom-controls" onClick={(e) => e.stopPropagation()}>
+              <button className="zoom-button" onClick={zoomOut}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 13H5v-2h14v2z"/>
+                </svg>
+              </button>
+              <button className="zoom-button" onClick={zoomIn}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       )}
