@@ -5,28 +5,28 @@ import BackButton from '../components/BackButton';
 
 function ArtPage() {
   const ART_FILES = [
-    '/art/1, oil on canvas, 16x20, 2024.jpg',
-    '/art/2, oil on canvas, 24x18, 2025.png',
-    '/art/3, acrylic on canvas, 16x20, 2024.jpg',
-    '/art/4, charcoal wash on paper, 16x24, 2025.jpg',
-    '/art/5, pastel on paper, 20x15, 2025.jpg',
-    '/art/6, colored pencil on paper, 20x25, 2025.jpg',
-    '/art/7, pastel on paper, 20x15, 2025.jpg',
-    '/art/8, charcoal on paper, 23x25, 2025.jpg',
-    '/art/9, white charcoal on black, 19x26, 2025.jpg',
-    '/art/10, acrylic on box canvas, 20x16, 2025.png',
-    '/art/11, acrylic on box canvas, 20x16, 2025.png',
-      '/art/selected 1, charcoal wash on paper, 22x30, 2024.png',
-      '/art/selected 2, oil on canvas, 16x20, 2024.png'
+    `${process.env.PUBLIC_URL}/art/1, oil on canvas, 16x20, 2024.jpg`,
+    `${process.env.PUBLIC_URL}/art/2, oil on canvas, 24x18, 2025.png`,
+    `${process.env.PUBLIC_URL}/art/3, acrylic on canvas, 16x20, 2024.jpg`,
+    `${process.env.PUBLIC_URL}/art/4, charcoal wash on paper, 16x24, 2025.jpg`,
+    `${process.env.PUBLIC_URL}/art/5, pastel on paper, 20x15, 2025.jpg`,
+    `${process.env.PUBLIC_URL}/art/6, colored pencil on paper, 20x25, 2025.jpg`,
+    `${process.env.PUBLIC_URL}/art/7, pastel on paper, 20x15, 2025.jpg`,
+    `${process.env.PUBLIC_URL}/art/8, charcoal on paper, 23x25, 2025.jpg`,
+    `${process.env.PUBLIC_URL}/art/9, white charcoal on black, 19x26, 2025.jpg`,
+    `${process.env.PUBLIC_URL}/art/10, acrylic on box canvas, 20x16, 2025.png`,
+    `${process.env.PUBLIC_URL}/art/11, acrylic on box canvas, 20x16, 2025.png`,
+      `${process.env.PUBLIC_URL}/art/selected 1, charcoal wash on paper, 22x30, 2024.png`,
+      `${process.env.PUBLIC_URL}/art/selected 2, oil on canvas, 16x20, 2024.png`
   ];
 
   const ART_PAIR_FILES = [
-    '/art/part1.png',
-     '/art/part2.png',
-     '/art/part3.png',
-     '/art/part4.png',
-      '/art/part5.png',
-      '/art/selectedpair.png'
+    `${process.env.PUBLIC_URL}/art/part1.png`,
+     `${process.env.PUBLIC_URL}/art/part2.png`,
+     `${process.env.PUBLIC_URL}/art/part3.png`,
+     `${process.env.PUBLIC_URL}/art/part4.png`,
+      `${process.env.PUBLIC_URL}/art/part5.png`,
+      `${process.env.PUBLIC_URL}/art/selectedpair.png`
   ];
 
   const ART_IMAGES = ART_FILES.map((src, index) => {
@@ -106,19 +106,19 @@ function ArtPage() {
   ];
 
   const pairMappings = {
-    0: '/art/part2.png',
-    1: '/art/part2.png',
-    2: '/art/part1.png',
-    3: '/art/part1.png',
-    4: '/art/part3.png',
-    5: '/art/part3.png',
-    6: '/art/part3.png',
-    7: '/art/part4.png',
-    8: '/art/part4.png',
-    9: '/art/part5.png',
-    10: '/art/part5.png',
-    11: '/art/selectedpair.png',
-    12: '/art/selectedpair.png'
+    0: `${process.env.PUBLIC_URL}/art/part2.png`,
+    1: `${process.env.PUBLIC_URL}/art/part2.png`,
+    2: `${process.env.PUBLIC_URL}/art/part1.png`,
+    3: `${process.env.PUBLIC_URL}/art/part1.png`,
+    4: `${process.env.PUBLIC_URL}/art/part3.png`,
+    5: `${process.env.PUBLIC_URL}/art/part3.png`,
+    6: `${process.env.PUBLIC_URL}/art/part3.png`,
+    7: `${process.env.PUBLIC_URL}/art/part4.png`,
+    8: `${process.env.PUBLIC_URL}/art/part4.png`,
+    9: `${process.env.PUBLIC_URL}/art/part5.png`,
+    10: `${process.env.PUBLIC_URL}/art/part5.png`,
+    11: `${process.env.PUBLIC_URL}/art/selectedpair.png`,
+    12: `${process.env.PUBLIC_URL}/art/selectedpair.png`
   };
 
   const scrambleFromSource = (source) => {
