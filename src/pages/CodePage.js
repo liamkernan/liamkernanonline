@@ -10,7 +10,7 @@ const projects = [
     live: "https://helpstudy.me"
   },
   {
-    title: "March Madness",
+    title: "March Madness Predictor",
     repo: "https://github.com/liamkernan/MarchMadness",
   },
     {
