@@ -20,14 +20,14 @@ function ArtPage() {
       '/art/selected 2, oil on canvas, 16x20, 2024.png'
   ];
 
-  const ART_PAIR_FILES = [
-    '/art/part1.png',
-     '/art/part2.png',
-     '/art/part3.png',
-     '/art/part4.png',
-      '/art/part5.png',
-      '/art/selectedpair.png'
-  ];
+  // const ART_PAIR_FILES = [
+  //   '/art/part1.png',
+  //    '/art/part2.png',
+  //    '/art/part3.png',
+  //    '/art/part4.png',
+  //     '/art/part5.png',
+  //     '/art/selectedpair.png'
+  // ];
 
   const ART_IMAGES = ART_FILES.map((src, index) => {
     const nameString = src.split('/').pop().replace(/\.[^/.]+$/, '');
@@ -74,15 +74,15 @@ function ArtPage() {
     };
   });
 
-  const ART_PAIR_IMAGES = ART_PAIR_FILES.map((src, index) => ({
-    id: `pair-${index}`,
-    src,
-    title: '',
-    materials: '',
-    size: '',
-    year: '',
-    description: '',
-  }));
+  // const ART_PAIR_IMAGES = ART_PAIR_FILES.map((src, index) => ({
+  //   id: `pair-${index}`,
+  //   src,
+  //   title: '',
+  //   materials: '',
+  //   size: '',
+  //   year: '',
+  //   description: '',
+  // }));
 
   const containerRef = useRef(null);
   const [images, setImages] = useState([]);
@@ -95,14 +95,14 @@ function ArtPage() {
   const [isPanning, setIsPanning] = useState(false);
   const [panStart, setPanStart] = useState({ x: 0, y: 0 });
 
-  const groupings = [
-    [0, 1],
-    [2, 3],
-    [4, 5, 6],
-    [7, 8],
-    [9, 10],
-    [11, 12]
-  ];
+  // const groupings = [
+  //   [0, 1],
+  //   [2, 3],
+  //   [4, 5, 6],
+  //   [7, 8],
+  //   [9, 10],
+  //   [11, 12]
+  // ];
 
   const pairMappings = {
     0: '/art/part2.png',
@@ -139,67 +139,67 @@ function ArtPage() {
     });
   };
 
-  const arrangePairs = () => {
-    const container = containerRef.current.getBoundingClientRect();
-    const margin = 10;
-    const imgWidth = 200; // fixed width so all pairs fit on screen
-    const rowHeight = 220;
+  // const arrangePairs = () => {
+  //   const container = containerRef.current.getBoundingClientRect();
+  //   const margin = 10;
+  //   const imgWidth = 200; // fixed width so all pairs fit on screen
+  //   const rowHeight = 220;
 
-    setImages((imgs) => {
-      const arr = [...imgs];
+  //   setImages((imgs) => {
+  //     const arr = [...imgs];
 
-      groupings.forEach((group, i) => {
-        const groupWidth =
-          imgWidth * group.length + margin * (group.length - 1);
+  //     groupings.forEach((group, i) => {
+  //       const groupWidth =
+  //         imgWidth * group.length + margin * (group.length - 1);
 
-        let x = margin;
-        let y = margin;
-        switch (i) {
-          case 0: // top left
-            x = margin;
-            y = margin;
-            break;
-          case 1: // top right
-            x = container.width - groupWidth - margin;
-            y = margin;
-            break;
-          case 2: // middle
-            x = (container.width - groupWidth) / 2;
-            y = container.height / 2 - rowHeight / 2;
-            break;
-          case 3: // bottom right
-            x = container.width - groupWidth - margin;
-            y = container.height - rowHeight - margin;
-            break;
-          case 4: // bottom left
-            x = margin;
-            y = container.height - rowHeight - margin;
-            break;
-          default:
-            break;
-        }
+  //       let x = margin;
+  //       let y = margin;
+  //       switch (i) {
+  //         case 0: // top left
+  //           x = margin;
+  //           y = margin;
+  //           break;
+  //         case 1: // top right
+  //           x = container.width - groupWidth - margin;
+  //           y = margin;
+  //           break;
+  //         case 2: // middle
+  //           x = (container.width - groupWidth) / 2;
+  //           y = container.height / 2 - rowHeight / 2;
+  //           break;
+  //         case 3: // bottom right
+  //           x = container.width - groupWidth - margin;
+  //           y = container.height - rowHeight - margin;
+  //           break;
+  //         case 4: // bottom left
+  //           x = margin;
+  //           y = container.height - rowHeight - margin;
+  //           break;
+  //         default:
+  //           break;
+  //       }
 
-        group.forEach((idx) => {
-          arr[idx] = {
-            ...arr[idx],
-            style: {
-              ...arr[idx].style,
-              left: x,
-              top: y,
-              width: imgWidth,
-            },
-          };
-          x += imgWidth + margin;
-        });
-      });
+  //       group.forEach((idx) => {
+  //         arr[idx] = {
+  //           ...arr[idx],
+  //           style: {
+  //             ...arr[idx].style,
+  //             left: x,
+  //             top: y,
+  //             width: imgWidth,
+  //           },
+  //         };
+  //         x += imgWidth + margin;
+  //       });
+  //     });
 
-      return arr;
-    });
-  };
+  //     return arr;
+  //   });
+  // };
 
   useEffect(() => {
     setImages(scrambleFromSource(ART_IMAGES));
-  }, []);
+  }, [ART_IMAGES]);
 
   const toggleView = () => {
     setIsPairView(!isPairView);
