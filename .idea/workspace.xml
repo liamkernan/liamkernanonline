@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="more github pages stuff">
-      <change beforePath="$PROJECT_DIR$/src/pages/CodePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CodePage.js" afterDir="false" />
+    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="test test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +89,7 @@
       <workItem from="1750873465611" duration="207000" />
       <workItem from="1750873687927" duration="635000" />
       <workItem from="1750874337438" duration="16124000" />
-      <workItem from="1752087550078" duration="10533000" />
+      <workItem from="1752087550078" duration="12372000" />
     </task>
     <task id="LOCAL-00001" summary="basic node.js layout with express">
       <option name="closed" value="true" />
@@ -235,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752988304656</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="test test">
+      <option name="closed" value="true" />
+      <created>1752988514651</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1752988514651</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +265,7 @@
     <MESSAGE value="made headers more consistent" />
     <MESSAGE value="changed full screen window" />
     <MESSAGE value="more github pages stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="more github pages stuff" />
+    <MESSAGE value="test test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test test" />
   </component>
 </project>
