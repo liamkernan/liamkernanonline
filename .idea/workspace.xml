@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="added back eslint">
+    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="made title a little darker">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LandingPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LandingPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +97,7 @@
       <workItem from="1750873687927" duration="635000" />
       <workItem from="1750874337438" duration="16124000" />
       <workItem from="1752087550078" duration="19388000" />
-      <workItem from="1753393651799" duration="5179000" />
+      <workItem from="1753393651799" duration="5514000" />
     </task>
     <task id="LOCAL-00001" summary="basic node.js layout with express">
       <option name="closed" value="true" />
@@ -282,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753468840860</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="made title a little darker">
+      <option name="closed" value="true" />
+      <created>1753469377719</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1753469377719</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +318,8 @@
     <MESSAGE value="finished up &quot;Actually About Me&quot; and cleaned up code" />
     <MESSAGE value="testing" />
     <MESSAGE value="added back eslint" />
-    <option name="LAST_COMMIT_MESSAGE" value="added back eslint" />
+    <MESSAGE value="made title a little darker" />
+    <option name="LAST_COMMIT_MESSAGE" value="made title a little darker" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
