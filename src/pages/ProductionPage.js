@@ -3,6 +3,7 @@ import "./ProductionPage.css";
 import React from 'react';
 import BackButton from '../components/BackButton';
 
+// A fixed list of example files to mimic a file explorer. No uploads allowed.
 const entries = [
   { id: 1, fileName: "Kick.wav" },
   { id: 2, fileName: "Snare.wav" },
