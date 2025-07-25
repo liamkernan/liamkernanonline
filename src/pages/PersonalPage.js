@@ -31,10 +31,10 @@ function PersonalPage() {
               In my free time, I love to ski more then anything else; I've been on trips out to Utah, Montana, California, Vermont, and I ski my local PA mountains almost everyday during the season (still working on my backflip). Powder Mountain is the best resort in the country, no contest!
           </p>
           <p>
-             Im also a huge audiophile; its something that ive been
+             I'm a huge audiophile; its something that my neighbor got me into and I've been loving it since. For my home setup, I have a pair of passive Polk ES15s and a Airmotiv SE8 sub driven through a Sony STR-DH190 and a Schiit Modi 3. I taught myself how to play keyboard and guitar, working on the latter right now.
           </p>
           <p>
-            My art practice has taught me patience, attention to detail, and the importance of iteration - skills that translate directly to software development. Whether I'm debugging a complex algorithm or working through a challenging composition, I approach problems with the same methodical curiosity and creative problem-solving mindset.
+            In the summer, I lifeguard religiously; I love to swim and I remember looking up to the lifeguards at my public pool as a kid, so it feels great to maybe be that to a kid like me. I've worked at 4 pools and am the lifeguard manager at my current pool.
           </p>
         </div>
       )}

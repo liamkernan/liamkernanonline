@@ -74,7 +74,6 @@ function ArtPage() {
     };
   });
 
-  // eslint-disable-next-line no-unused-vars
   const ART_PAIR_IMAGES = ART_PAIR_FILES.map((src, index) => ({
     id: `pair-${index}`,
     src,
@@ -140,7 +139,6 @@ function ArtPage() {
     });
   };
 
-  // eslint-disable-next-line no-unused-vars
   const arrangePairs = () => {
     const container = containerRef.current.getBoundingClientRect();
     const margin = 10;
@@ -201,7 +199,6 @@ function ArtPage() {
 
   useEffect(() => {
     setImages(scrambleFromSource(ART_IMAGES));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const toggleView = () => {
@@ -228,7 +225,6 @@ function ArtPage() {
     const img = images[index];
     const container = containerRef.current.getBoundingClientRect();
 
-    // Bring the clicked image to the top layer
     setImages((imgs) => {
       const maxZ = Math.max(...imgs.map((im) => im.style.zIndex || 0));
       const arr = [...imgs];
