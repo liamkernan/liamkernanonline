@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="new build folder to hopefully propagate dns update">
+    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="new homepage in package.json">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
@@ -102,7 +102,7 @@
       <workItem from="1753588151752" duration="6000" />
       <workItem from="1753983291174" duration="344000" />
       <workItem from="1754016501647" duration="3000" />
-      <workItem from="1754079920456" duration="369000" />
+      <workItem from="1754079920456" duration="2227000" />
     </task>
     <task id="LOCAL-00001" summary="basic node.js layout with express">
       <option name="closed" value="true" />
@@ -312,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753983478158</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="new homepage in package.json">
+      <option name="closed" value="true" />
+      <created>1754080304697</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1754080304697</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +350,8 @@
     <MESSAGE value="made title a little darker" />
     <MESSAGE value="added metadata title and favicon.ico" />
     <MESSAGE value="new build folder to hopefully propagate dns update" />
-    <option name="LAST_COMMIT_MESSAGE" value="new build folder to hopefully propagate dns update" />
+    <MESSAGE value="new homepage in package.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="new homepage in package.json" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
