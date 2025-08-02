@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="new build folder to hopefully propagate dns update">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;liamkernan&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/liamkernan/liamkernanonline.git&quot;,
+    &quot;accountId&quot;: &quot;ba019529-99c9-43c6-a33b-4126f45ff955&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2yvHo8gWAcMRwAUrJIdX7l4fTah" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.CodePage.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/liamkernan/IdeaProjects/liamkernanonline/public/art&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/art" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/public/art" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26927.53" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.26927.53" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="" />
+      <created>1750708298259</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1750708298259</updated>
+      <workItem from="1750708299346" duration="13593000" />
+      <workItem from="1750873465611" duration="207000" />
+      <workItem from="1750873687927" duration="635000" />
+      <workItem from="1750874337438" duration="16124000" />
+      <workItem from="1752087550078" duration="19388000" />
+      <workItem from="1753393651799" duration="6815000" />
+      <workItem from="1753588151752" duration="6000" />
+      <workItem from="1753983291174" duration="344000" />
+      <workItem from="1754016501647" duration="3000" />
+      <workItem from="1754079920456" duration="369000" />
+    </task>
+    <task id="LOCAL-00001" summary="basic node.js layout with express">
+      <option name="closed" value="true" />
+      <created>1750709129633</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750709129633</updated>
+    </task>
+    <task id="LOCAL-00002" summary="full react redo">
+      <option name="closed" value="true" />
+      <created>1750710679352</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750710679352</updated>
+    </task>
+    <task id="LOCAL-00003" summary="full react redo">
+      <option name="closed" value="true" />
+      <created>1750715141204</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750715141204</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fixed">
+      <option name="closed" value="true" />
+      <created>1750715352668</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750715352668</updated>
+    </task>
+    <task id="LOCAL-00005" summary="new format">
+      <option name="closed" value="true" />
+      <created>1750717234415</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1750717234415</updated>
+    </task>
+    <task id="LOCAL-00006" summary="new art page formatting">
+      <option name="closed" value="true" />
+      <created>1750796502308</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1750796502308</updated>
+    </task>
+    <task id="LOCAL-00007" summary="new about me">
+      <option name="closed" value="true" />
+      <created>1750873797728</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1750873797728</updated>
+    </task>
+    <task id="LOCAL-00008" summary="new art">
+      <option name="closed" value="true" />
+      <created>1750874743499</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1750874743499</updated>
+    </task>
+    <task id="LOCAL-00009" summary="tailwind css support">
+      <option name="closed" value="true" />
+      <created>1750875541367</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1750875541367</updated>
+    </task>
+    <task id="LOCAL-00010" summary="rehauled art page again new pair view new fullscreen formatting and added scoial media buttons and back arrows">
+      <option name="closed" value="true" />
+      <created>1750915228566</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1750915228566</updated>
+    </task>
+    <task id="LOCAL-00011" summary="new arrows and formatting">
+      <option name="closed" value="true" />
+      <created>1750915567795</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1750915567795</updated>
+    </task>
+    <task id="LOCAL-00012" summary="still working on art page, new organized view and formatting">
+      <option name="closed" value="true" />
+      <created>1750986321413</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1750986321413</updated>
+    </task>
+    <task id="LOCAL-00013" summary="new &quot;actually about me&quot; toggle pretty fun">
+      <option name="closed" value="true" />
+      <created>1750986739619</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1750986739619</updated>
+    </task>
+    <task id="LOCAL-00014" summary="made headers more consistent">
+      <option name="closed" value="true" />
+      <created>1751003564469</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1751003564469</updated>
+    </task>
+    <task id="LOCAL-00015" summary="changed full screen window">
+      <option name="closed" value="true" />
+      <created>1752092354217</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1752092354217</updated>
+    </task>
+    <task id="LOCAL-00016" summary="changed full screen window">
+      <option name="closed" value="true" />
+      <created>1752094278243</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1752094278243</updated>
+    </task>
+    <task id="LOCAL-00017" summary="changed full screen window">
+      <option name="closed" value="true" />
+      <created>1752988146293</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1752988146293</updated>
+    </task>
+    <task id="LOCAL-00018" summary="more github pages stuff">
+      <option name="closed" value="true" />
+      <created>1752988304656</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1752988304656</updated>
+    </task>
+    <task id="LOCAL-00019" summary="test test">
+      <option name="closed" value="true" />
+      <created>1752988514651</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1752988514651</updated>
+    </task>
+    <task id="LOCAL-00020" summary="added new tile to code page n started rewriting PersonalPage.js">
+      <option name="closed" value="true" />
+      <created>1753467054327</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1753467054328</updated>
+    </task>
+    <task id="LOCAL-00021" summary="finished up &quot;Actually About Me&quot; and cleaned up code">
+      <option name="closed" value="true" />
+      <created>1753468278904</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1753468278904</updated>
+    </task>
+    <task id="LOCAL-00022" summary="testing">
+      <option name="closed" value="true" />
+      <created>1753468520200</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1753468520200</updated>
+    </task>
+    <task id="LOCAL-00023" summary="added back eslint">
+      <option name="closed" value="true" />
+      <created>1753468840860</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1753468840860</updated>
+    </task>
+    <task id="LOCAL-00024" summary="made title a little darker">
+      <option name="closed" value="true" />
+      <created>1753469377719</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1753469377719</updated>
+    </task>
+    <task id="LOCAL-00025" summary="added metadata title and favicon.ico">
+      <option name="closed" value="true" />
+      <created>1753469716752</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1753469716752</updated>
+    </task>
+    <task id="LOCAL-00026" summary="new build folder to hopefully propagate dns update">
+      <option name="closed" value="true" />
+      <created>1753983478158</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1753983478158</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="basic node.js layout with express" />
+    <MESSAGE value="full react redo" />
+    <MESSAGE value="fixed" />
+    <MESSAGE value="new format" />
+    <MESSAGE value="new art page formatting" />
+    <MESSAGE value="new about me" />
+    <MESSAGE value="new art" />
+    <MESSAGE value="tailwind css support" />
+    <MESSAGE value="rehauled art page again new pair view new fullscreen formatting and added scoial media buttons and back arrows" />
+    <MESSAGE value="new arrows and formatting" />
+    <MESSAGE value="still working on art page, new organized view and formatting" />
+    <MESSAGE value="new &quot;actually about me&quot; toggle pretty fun" />
+    <MESSAGE value="made headers more consistent" />
+    <MESSAGE value="changed full screen window" />
+    <MESSAGE value="more github pages stuff" />
+    <MESSAGE value="test test" />
+    <MESSAGE value="added new tile to code page n started rewriting PersonalPage.js" />
+    <MESSAGE value="finished up &quot;Actually About Me&quot; and cleaned up code" />
+    <MESSAGE value="testing" />
+    <MESSAGE value="added back eslint" />
+    <MESSAGE value="made title a little darker" />
+    <MESSAGE value="added metadata title and favicon.ico" />
+    <MESSAGE value="new build folder to hopefully propagate dns update" />
+    <option name="LAST_COMMIT_MESSAGE" value="new build folder to hopefully propagate dns update" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
