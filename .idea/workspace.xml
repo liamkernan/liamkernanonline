@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="new deploy command">
+    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="router update in App.js">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BackButton.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BackButton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SocialButtons.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SocialButtons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ArtPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ArtPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ArtPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ArtPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LandingPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LandingPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LandingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PageStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PageStyles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +109,8 @@
       <workItem from="1753588151752" duration="6000" />
       <workItem from="1753983291174" duration="344000" />
       <workItem from="1754016501647" duration="3000" />
-      <workItem from="1754079920456" duration="3399000" />
+      <workItem from="1754079920456" duration="3957000" />
+      <workItem from="1754971974983" duration="1789000" />
     </task>
     <task id="LOCAL-00001" summary="basic node.js layout with express">
       <option name="closed" value="true" />
@@ -328,14 +336,21 @@
       <option name="project" value="LOCAL" />
       <updated>1754095421358</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="router update in App.js">
+      <option name="closed" value="true" />
+      <created>1754096602099</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1754096602099</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="basic node.js layout with express" />
     <MESSAGE value="full react redo" />
     <MESSAGE value="fixed" />
     <MESSAGE value="new format" />
@@ -360,7 +375,8 @@
     <MESSAGE value="new build folder to hopefully propagate dns update" />
     <MESSAGE value="new homepage in package.json" />
     <MESSAGE value="new deploy command" />
-    <option name="LAST_COMMIT_MESSAGE" value="new deploy command" />
+    <MESSAGE value="router update in App.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="router update in App.js" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

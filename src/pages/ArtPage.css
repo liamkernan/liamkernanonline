@@ -371,9 +371,22 @@
   transform: scale(0.95);
 }
 
+
 @media (max-width: 768px) {
+  .art-page h2 {
+    font-size: 4rem;
+    top: 1rem;
+  }
+
+  .arrange-button {
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+
   .organized-view {
-    padding: 6rem 1rem 2rem 1rem;
+    padding: 8rem 1rem 2rem 1rem;
   }
 
   .artwork-row {
@@ -384,12 +397,12 @@
 
   .artwork-image-container {
     flex: none;
-    min-height: 300px;
+    min-height: 250px;
     padding: 1rem;
   }
 
   .artwork-image {
-    max-height: 50vh;
+    max-height: 45vh;
   }
 
   .artwork-details {
@@ -402,20 +415,29 @@
     font-size: 1.2rem;
   }
 
+  .artwork-info {
+    font-size: 0.9rem;
+  }
+
   .artwork-description {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 
   .show-pair-button {
     position: static;
     margin-top: 1rem;
     align-self: flex-start;
+    padding: 0.8rem 1.4rem;
+    font-size: 0.9rem;
   }
 
   .overlay-content {
     flex-direction: column;
     max-height: 95vh;
     border-radius: 16px;
+    margin: 1rem;
   }
   
   .overlay-image {
@@ -432,22 +454,100 @@
   }
 
   .overlay-details h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .overlay-details p {
+    font-size: 0.9rem;
   }
 
   .zoom-controls {
-    bottom: 10px;
-    right: 10px;
+    bottom: 15px;
+    right: 15px;
     gap: 8px;
   }
   
   .zoom-button {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 
   .image-container {
     max-width: 95vw;
     max-height: 95vh;
+  }
+
+  .art-container {
+    touch-action: pan-x pan-y;
+  }
+}
+
+@media (max-width: 480px) {
+  .art-page h2 {
+    font-size: 3rem;
+  }
+
+  .organized-view {
+    padding: 7rem 0.5rem 2rem 0.5rem;
+  }
+
+  .artwork-row {
+    margin-bottom: 1.5rem;
+  }
+
+  .artwork-image-container {
+    min-height: 200px;
+    padding: 0.8rem;
+  }
+
+  .artwork-image {
+    max-height: 40vh;
+  }
+
+  .artwork-details {
+    padding: 0.8rem;
+  }
+
+  .artwork-title {
+    font-size: 1.1rem;
+  }
+
+  .artwork-info {
+    font-size: 0.8rem;
+  }
+
+  .artwork-description {
+    font-size: 0.8rem;
+  }
+
+  .show-pair-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .overlay-content {
+    margin: 0.5rem;
+  }
+
+  .overlay-details {
+    padding: 1rem;
+  }
+
+  .overlay-details h3 {
+    font-size: 1.2rem;
+  }
+
+  .overlay-details p {
+    font-size: 0.85rem;
+  }
+
+  .zoom-controls {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .zoom-button {
+    width: 44px;
+    height: 44px;
   }
 }

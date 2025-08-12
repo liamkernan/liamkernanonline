@@ -89,7 +89,7 @@ function ArtPage() {
   const [images, setImages] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
   const [dragState, setDragState] = useState(null);
-  const [isPairView, setIsPairView] = useState(false);
+  const [isPairView, setIsPairView] = useState(window.innerWidth <= 768);
   const [zoomLevel, setZoomLevel] = useState(1);
   const [panX, setPanX] = useState(0);
   const [panY, setPanY] = useState(0);
@@ -203,6 +203,17 @@ function ArtPage() {
     setImages(scrambleFromSource(ART_IMAGES));
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const isMobile = window.innerWidth <= 768;
+      setIsPairView(isMobile);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
 
   const toggleView = () => {
     setIsPairView(!isPairView);

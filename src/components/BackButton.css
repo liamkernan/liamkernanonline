@@ -25,3 +25,22 @@
   text-decoration: none;
   color: #000000;
 }
+
+@media (max-width: 768px) {
+  .back-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    top: 1.2rem;
+    left: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    top: 1rem;
+    left: 1rem;
+  }
+}

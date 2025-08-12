@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Restore default styling that Tailwind reset removes */
 @layer base {
   html,
   body {
@@ -24,7 +23,6 @@
       monospace;
   }
 
-  /* Restore default heading sizes */
   h1 {
     font-size: 2em;
     font-weight: bold;
@@ -66,12 +64,10 @@
     margin: 1em 0;
   }
 
-  /* Restore default button styling */
   button {
     cursor: pointer;
   }
 
-  /* Restore default link styling */
   a {
     color: #0066cc;
     text-decoration: underline;
