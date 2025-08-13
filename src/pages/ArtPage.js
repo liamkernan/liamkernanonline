@@ -34,7 +34,7 @@ function ArtPage() {
     const parts = nameString.split(',').map((s) => s.trim());
 
     const titles = {
-      0: "remains of true beauty still exist in what humans have altered",
+      0: "remains of true beauty still exist in what humans have castrated",
       1: "the true beauty in question",
       2: "the widow",
       3: "her everything",
@@ -95,6 +95,9 @@ function ArtPage() {
   const [panY, setPanY] = useState(0);
   const [isPanning, setIsPanning] = useState(false);
   const [panStart, setPanStart] = useState({ x: 0, y: 0 });
+  const [selectedFilter, setSelectedFilter] = useState('all');
+  const [isFilterBarVisible, setIsFilterBarVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const groupings = [
     [0, 1],
@@ -213,6 +216,29 @@ function ArtPage() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  useEffect(() => {
+    const handleScroll = (e) => {
+      const organizedView = e.target;
+      const currentScrollY = organizedView.scrollTop;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 0) {
+        setIsFilterBarVisible(false);
+      } else if (currentScrollY < lastScrollY || currentScrollY === 0) {
+        setIsFilterBarVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    if (isPairView) {
+      const organizedView = document.querySelector('.organized-view');
+      if (organizedView) {
+        organizedView.addEventListener('scroll', handleScroll, { passive: true });
+        return () => organizedView.removeEventListener('scroll', handleScroll);
+      }
+    }
+  }, [lastScrollY, isPairView]);
 
 
   const toggleView = () => {
@@ -352,11 +378,29 @@ function ArtPage() {
     setIsPanning(false);
   };
 
+  const categories = [
+    { id: 'all', name: 'All', indices: [] },
+    { id: 'delusion', name: 'Clarity', indices: [0, 1] },
+    { id: 'resonance', name: 'Resonance', indices: [2, 3] },
+    { id: 'cycle', name: 'Cycle', indices: [4, 5, 6] },
+    { id: 'nightmare', name: 'Nightmare', indices: [7, 8] },
+    { id: 'spirituality', name: 'Spirituality', indices: [9, 10] },
+    { id: 'nature', name: 'Nature', indices: [11, 12] }
+  ];
+
+  const getFilteredArtworks = () => {
+    if (selectedFilter === 'all') {
+      return ART_IMAGES;
+    }
+    const category = categories.find(cat => cat.id === selectedFilter);
+    return category ? ART_IMAGES.filter((_, index) => category.indices.includes(index)) : ART_IMAGES;
+  };
+
   return (
     <div className="art-page">
       <BackButton />
       <h2 className="text-center text-8xl">art</h2>
-        {!selectedImage && (
+        {!selectedImage && window.innerWidth > 768 && (
           <button className="arrange-button" onClick={toggleView}>
             {isPairView ? 'Intended View' : 'Organized View'}
           </button>
@@ -364,7 +408,18 @@ function ArtPage() {
 
       {isPairView ? (
         <div className="organized-view">
-          {ART_IMAGES.map((artwork, index) => (
+          <div className={`filter-bar ${isFilterBarVisible ? 'visible' : 'hidden'}`}>
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                className={`filter-button ${selectedFilter === category.id ? 'active' : ''}`}
+                onClick={() => setSelectedFilter(category.id)}
+              >
+                {category.name}
+              </button>
+            ))}
+          </div>
+          {getFilteredArtworks().map((artwork, index) => (
             <div key={artwork.id} className="artwork-row">
               <div className="artwork-image-container">
                 <img 

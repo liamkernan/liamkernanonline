@@ -13,7 +13,9 @@ function PersonalPage() {
   return (
     <div className="page-container">
       <BackButton />
-      <p className="bio-text">
+        <h2 className="text-center text-8xl">me</h2>
+
+        <p className="bio-text">
         My name is Liam Kernan - I am a student at Syracuse University, a visual artist with a focus in painting, and a programmer with an interest in the safety and development of LLM models and Artificial Intelligence products.
       </p>
       
