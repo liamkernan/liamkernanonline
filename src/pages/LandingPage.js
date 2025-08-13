@@ -6,7 +6,7 @@ import './LandingPage.css';
 function LandingPage() {
   return (
     <div className="landing-container">
-      <h1 className="site-title">Liam Kernan</h1>
+      <h1 className="site-title montserrat-bold">Liam Kernan</h1>
       <nav className="landing-nav">
         <Link to="/code" className="nav-button">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#666" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="nav-icon">

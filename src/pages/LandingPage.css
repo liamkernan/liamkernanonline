@@ -21,6 +21,14 @@
   gap: 1rem;
 }
 
+
+.montserrat-bold {
+               font-family: "Montserrat", sans-serif;
+               font-optical-sizing: auto;
+               font-weight: 100;
+               font-style: normal;
+             }
+
 .nav-button {
   text-decoration: none;
   color: #3a3a3a;

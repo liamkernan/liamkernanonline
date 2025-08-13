@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="router update in App.js">
+    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="more optimizing for image load speeds on ArtPage.js">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BackButton.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BackButton.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SocialButtons.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SocialButtons.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ArtPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ArtPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ArtPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ArtPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/LandingPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LandingPage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LandingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/PageStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PageStyles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +105,8 @@
       <workItem from="1753983291174" duration="344000" />
       <workItem from="1754016501647" duration="3000" />
       <workItem from="1754079920456" duration="3957000" />
-      <workItem from="1754971974983" duration="1789000" />
+      <workItem from="1754971974983" duration="2625000" />
+      <workItem from="1755102447039" duration="983000" />
     </task>
     <task id="LOCAL-00001" summary="basic node.js layout with express">
       <option name="closed" value="true" />
@@ -344,15 +340,29 @@
       <option name="project" value="LOCAL" />
       <updated>1754096602099</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="optimized website for mobile, improved image loading speeds on ArtPage.js, and switched up buttons on main screen">
+      <option name="closed" value="true" />
+      <created>1754974239332</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1754974239332</updated>
+    </task>
+    <task id="LOCAL-00031" summary="more optimizing for image load speeds on ArtPage.js">
+      <option name="closed" value="true" />
+      <created>1754974523716</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1754974523716</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="full react redo" />
-    <MESSAGE value="fixed" />
     <MESSAGE value="new format" />
     <MESSAGE value="new art page formatting" />
     <MESSAGE value="new about me" />
@@ -376,7 +386,9 @@
     <MESSAGE value="new homepage in package.json" />
     <MESSAGE value="new deploy command" />
     <MESSAGE value="router update in App.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="router update in App.js" />
+    <MESSAGE value="optimized website for mobile, improved image loading speeds on ArtPage.js, and switched up buttons on main screen" />
+    <MESSAGE value="more optimizing for image load speeds on ArtPage.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="more optimizing for image load speeds on ArtPage.js" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
