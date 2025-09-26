@@ -86,6 +86,7 @@ function ArtPage() {
   }));
 
   const containerRef = useRef(null);
+  const organizedViewRef = useRef(null);
   const [images, setImages] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
   const [dragState, setDragState] = useState(null);
@@ -218,25 +219,26 @@ function ArtPage() {
   }, []);
 
   useEffect(() => {
-    const handleScroll = (e) => {
-      const organizedView = e.target;
-      const currentScrollY = organizedView.scrollTop;
+    if (!isPairView || !organizedViewRef.current) return;
+
+    const handleScroll = () => {
+      const currentScrollY = organizedViewRef.current.scrollTop;
       
-      if (currentScrollY > lastScrollY && currentScrollY > 0) {
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsFilterBarVisible(false);
-      } else if (currentScrollY < lastScrollY || currentScrollY === 0) {
+      } else if (currentScrollY < lastScrollY || currentScrollY <= 50) {
         setIsFilterBarVisible(true);
       }
       
       setLastScrollY(currentScrollY);
     };
 
-    if (isPairView) {
-      const organizedView = document.querySelector('.organized-view');
-      if (organizedView) {
-        organizedView.addEventListener('scroll', handleScroll, { passive: true });
-        return () => organizedView.removeEventListener('scroll', handleScroll);
-      }
+    const organizedView = organizedViewRef.current;
+    if (organizedView) {
+      organizedView.addEventListener('scroll', handleScroll, { passive: true });
+      return () => {
+        organizedView.removeEventListener('scroll', handleScroll);
+      };
     }
   }, [lastScrollY, isPairView]);
 
@@ -379,13 +381,13 @@ function ArtPage() {
   };
 
   const categories = [
-    { id: 'all', name: 'All', indices: [] },
-    { id: 'delusion', name: 'Clarity', indices: [0, 1] },
-    { id: 'resonance', name: 'Resonance', indices: [2, 3] },
-    { id: 'cycle', name: 'Cycle', indices: [4, 5, 6] },
-    { id: 'nightmare', name: 'Nightmare', indices: [7, 8] },
-    { id: 'spirituality', name: 'Spirituality', indices: [9, 10] },
-    { id: 'nature', name: 'Nature', indices: [11, 12] }
+    { id: 'all', name: 'all', indices: [] },
+    { id: 'delusion', name: 'clarity', indices: [0, 1] },
+    { id: 'resonance', name: 'resonance', indices: [2, 3] },
+    { id: 'cycle', name: 'cycle', indices: [4, 5, 6] },
+    { id: 'nightmare', name: 'nightmare', indices: [7, 8] },
+    { id: 'spirituality', name: 'spirituality', indices: [9, 10] },
+    { id: 'nature', name: 'views', indices: [11, 12] }
   ];
 
   const getFilteredArtworks = () => {
@@ -407,7 +409,7 @@ function ArtPage() {
         )}
 
       {isPairView ? (
-        <div className="organized-view">
+        <div className="organized-view" ref={organizedViewRef}>
           <div className={`filter-bar ${isFilterBarVisible ? 'visible' : 'hidden'}`}>
             {categories.map((category) => (
               <button

@@ -30,10 +30,10 @@ function PersonalPage() {
       {showDetails && (
         <div className="detailed-bio">
           <p>
-              In my free time, I love to ski more then anything else; I've been on trips out to Utah, Montana, California, Vermont, and I ski my local PA mountains almost everyday during the season (still working on my backflip). Powder Mountain is the best resort in the country, no contest!
+              In my free time, I love to ski more then anything else; I've been on trips out to Utah, Montana, California, Vermont, and I ski my local PA mountains almost everyday during the season (still working on my backflip). Powder Mountain is the best resort in the country, no debate.
           </p>
           <p>
-             I'm a huge audiophile; its something that my neighbor got me into and I've been loving it since. For my home setup, I have a pair of passive Polk ES15s and a Airmotiv SE8 sub driven through a Sony STR-DH190 and a Schiit Modi 3. I taught myself how to play keyboard and guitar, working on the latter right now.
+             I'm a huge audiophile; its something that my best friend got me into and I've been loving it since. For my home setup, I have a pair of passive Polk ES15s and a Airmotiv SE8 sub driven through a Sony STR-DH190 and a Schiit Modi 3. I taught myself how to play keyboard and guitar, working on the latter right now.
           </p>
           <p>
             In the summer, I lifeguard religiously; I love to swim and I remember looking up to the lifeguards at my public pool as a kid, so it feels great to maybe be that to a kid like me. I've worked at 4 pools and am the lifeguard manager at my current pool.

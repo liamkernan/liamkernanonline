@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="added new &quot;filter&quot; bar for ArtPage.js, and made styling more consistent overall">
+    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="trying to make gradient extend beyond edge of frame">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ArtPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ArtPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ArtPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ArtPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PersonalPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PersonalPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +83,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26927.53" />
-        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.26927.53" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.27812.49" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.27812.49" />
       </set>
     </attachedChunks>
   </component>
@@ -103,6 +107,8 @@
       <workItem from="1754079920456" duration="3957000" />
       <workItem from="1754971974983" duration="2625000" />
       <workItem from="1755102447039" duration="2769000" />
+      <workItem from="1755277278197" duration="327000" />
+      <workItem from="1758916377108" duration="591000" />
     </task>
     <task id="LOCAL-00001" summary="basic node.js layout with express">
       <option name="closed" value="true" />
@@ -368,14 +374,21 @@
       <option name="project" value="LOCAL" />
       <updated>1755108967201</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="trying to make gradient extend beyond edge of frame">
+      <option name="closed" value="true" />
+      <created>1755277432585</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1755277432585</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new about me" />
     <MESSAGE value="new art" />
     <MESSAGE value="tailwind css support" />
     <MESSAGE value="rehauled art page again new pair view new fullscreen formatting and added scoial media buttons and back arrows" />
@@ -400,7 +413,8 @@
     <MESSAGE value="more optimizing for image load speeds on ArtPage.js" />
     <MESSAGE value="new landing page font" />
     <MESSAGE value="added new &quot;filter&quot; bar for ArtPage.js, and made styling more consistent overall" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new &quot;filter&quot; bar for ArtPage.js, and made styling more consistent overall" />
+    <MESSAGE value="trying to make gradient extend beyond edge of frame" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying to make gradient extend beyond edge of frame" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

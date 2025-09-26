@@ -1,7 +1,6 @@
 .art-page {
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 .art-page h2 {
@@ -191,11 +190,14 @@
 .filter-bar.visible {
   transform: translateY(0);
   opacity: 1;
+  visibility: visible;
 }
 
 .filter-bar.hidden {
   transform: translateY(-100%);
   opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .filter-button {
