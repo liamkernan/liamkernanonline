@@ -5,17 +5,17 @@ import BackButton from '../components/BackButton';
 
 function ArtPage() {
   const ART_FILES = [
-    `${process.env.PUBLIC_URL}/art/1, oil on canvas, 16x20, 2024.jpg`,
-    `${process.env.PUBLIC_URL}/art/2, oil on canvas, 24x18, 2025.png`,
-    `${process.env.PUBLIC_URL}/art/3, acrylic on canvas, 16x20, 2024.jpg`,
-    `${process.env.PUBLIC_URL}/art/4, charcoal wash on paper, 16x24, 2025.jpg`,
-    `${process.env.PUBLIC_URL}/art/5, pastel on paper, 20x15, 2025.jpg`,
-    `${process.env.PUBLIC_URL}/art/6, colored pencil on paper, 20x25, 2025.jpg`,
-    `${process.env.PUBLIC_URL}/art/7, pastel on paper, 20x15, 2025.jpg`,
-    `${process.env.PUBLIC_URL}/art/8, charcoal on paper, 23x25, 2025.jpg`,
-    `${process.env.PUBLIC_URL}/art/9, white charcoal on black, 19x26, 2025.jpg`,
-    `${process.env.PUBLIC_URL}/art/10, acrylic on box canvas, 20x16, 2025.png`,
-    `${process.env.PUBLIC_URL}/art/11, acrylic on box canvas, 20x16, 2025.png`,
+    `${process.env.PUBLIC_URL}/art/1art.webp`,
+    `${process.env.PUBLIC_URL}/art/2art.webp`,
+    `${process.env.PUBLIC_URL}/art/3art.webp`,
+    `${process.env.PUBLIC_URL}/art/4art.webp`,
+    `${process.env.PUBLIC_URL}/art/5art.webp`,
+    `${process.env.PUBLIC_URL}/art/6art.webp`,
+    `${process.env.PUBLIC_URL}/art/7art.webp`,
+    `${process.env.PUBLIC_URL}/art/8art.webp`,
+    `${process.env.PUBLIC_URL}/art/9art.webp`,
+    `${process.env.PUBLIC_URL}/art/10art.webp`,
+    `${process.env.PUBLIC_URL}/art/11art.webp`,
       `${process.env.PUBLIC_URL}/art/selected 1, charcoal wash on paper, 22x30, 2024.png`,
       `${process.env.PUBLIC_URL}/art/selected 2, oil on canvas, 16x20, 2024.png`
   ];
@@ -34,7 +34,7 @@ function ArtPage() {
     const parts = nameString.split(',').map((s) => s.trim());
 
     const titles = {
-      0: "remains of true beauty still exist in what humans have castrated",
+      0: "remains of true beauty still exist in what we have castrated",
       1: "the true beauty in question",
       2: "the widow",
       3: "her everything",

@@ -4,12 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="trying to make gradient extend beyond edge of frame">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="fixing scrolling mechanic on organized art page and updated about me">
+      <change afterPath="$PROJECT_DIR$/public/art/10art.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/art/11art.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/art/1art.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/art/2art.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/art/3art.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/art/4art.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/art/5art.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/art/6art.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/art/7art.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/art/8art.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/art/9art.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ArtPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ArtPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/art/1, oil on canvas, 16x20, 2024.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/art/10, acrylic on box canvas, 20x16, 2025.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/art/11, acrylic on box canvas, 20x16, 2025.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/art/2, oil on canvas, 24x18, 2025.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/art/3, acrylic on canvas, 16x20, 2024.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/art/4, charcoal wash on paper, 16x24, 2025.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/art/5, pastel on paper, 20x15, 2025.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/art/6, colored pencil on paper, 20x25, 2025.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/art/7, pastel on paper, 20x15, 2025.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/art/8, charcoal on paper, 23x25, 2025.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/art/9, white charcoal on black, 19x26, 2025.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/ArtPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ArtPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/PersonalPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PersonalPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CodePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CodePage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CodePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CodePage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +129,8 @@
       <workItem from="1754971974983" duration="2625000" />
       <workItem from="1755102447039" duration="2769000" />
       <workItem from="1755277278197" duration="327000" />
-      <workItem from="1758916377108" duration="591000" />
+      <workItem from="1758916377108" duration="1305000" />
+      <workItem from="1760983167951" duration="2724000" />
     </task>
     <task id="LOCAL-00001" summary="basic node.js layout with express">
       <option name="closed" value="true" />
@@ -382,14 +404,21 @@
       <option name="project" value="LOCAL" />
       <updated>1755277432585</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="fixing scrolling mechanic on organized art page and updated about me">
+      <option name="closed" value="true" />
+      <created>1758916985626</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1758916985626</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new art" />
     <MESSAGE value="tailwind css support" />
     <MESSAGE value="rehauled art page again new pair view new fullscreen formatting and added scoial media buttons and back arrows" />
     <MESSAGE value="new arrows and formatting" />
@@ -414,7 +443,8 @@
     <MESSAGE value="new landing page font" />
     <MESSAGE value="added new &quot;filter&quot; bar for ArtPage.js, and made styling more consistent overall" />
     <MESSAGE value="trying to make gradient extend beyond edge of frame" />
-    <option name="LAST_COMMIT_MESSAGE" value="trying to make gradient extend beyond edge of frame" />
+    <MESSAGE value="fixing scrolling mechanic on organized art page and updated about me" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing scrolling mechanic on organized art page and updated about me" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
