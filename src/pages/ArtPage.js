@@ -401,7 +401,7 @@ function ArtPage() {
   return (
     <div className="art-page">
       <BackButton />
-      <h2 className="text-center text-8xl">art</h2>
+      <h2 className="text-center google-sanscode text-8xl">art</h2>
         {!selectedImage && window.innerWidth > 768 && (
           <button className="arrange-button" onClick={toggleView}>
             {isPairView ? 'Intended View' : 'Organized View'}

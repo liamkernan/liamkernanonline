@@ -35,7 +35,7 @@ function CodePage() {
   return (
     <div className="page-container">
       <BackButton />
-        <h2 className="text-center text-8xl">code</h2>
+        <h2 className="text-center google-sanscode text-8xl">code</h2>
       <div className="projects-grid">
         {projects.map((project) => (
           <div key={project.title} className="project-card">

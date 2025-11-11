@@ -10,7 +10,7 @@
 }
 
 .site-title {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-size: 5rem;
   color: #5a5a5a;
 }
@@ -28,6 +28,13 @@
                font-weight: 100;
                font-style: normal;
              }
+
+.google-sanscode {
+  font-family: "Google Sans Code", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+}
 
 .nav-button {
   text-decoration: none;
