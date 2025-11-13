@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="switched images from png and jpeg to webp for faster image load times, added my new project to code page">
+    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="new code typeface based font for titles of each page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ArtPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ArtPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/CodePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CodePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LandingPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LandingPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LandingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/PersonalPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PersonalPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +106,8 @@
       <workItem from="1755277278197" duration="327000" />
       <workItem from="1758916377108" duration="1305000" />
       <workItem from="1760983167951" duration="2806000" />
-      <workItem from="1762828393054" duration="1055000" />
+      <workItem from="1762828393054" duration="1776000" />
+      <workItem from="1762837401841" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="basic node.js layout with express">
       <option name="closed" value="true" />
@@ -402,14 +397,21 @@
       <option name="project" value="LOCAL" />
       <updated>1760986701116</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="new code typeface based font for titles of each page">
+      <option name="closed" value="true" />
+      <created>1762829566899</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1762829566899</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rehauled art page again new pair view new fullscreen formatting and added scoial media buttons and back arrows" />
     <MESSAGE value="new arrows and formatting" />
     <MESSAGE value="still working on art page, new organized view and formatting" />
     <MESSAGE value="new &quot;actually about me&quot; toggle pretty fun" />
@@ -434,7 +436,8 @@
     <MESSAGE value="trying to make gradient extend beyond edge of frame" />
     <MESSAGE value="fixing scrolling mechanic on organized art page and updated about me" />
     <MESSAGE value="switched images from png and jpeg to webp for faster image load times, added my new project to code page" />
-    <option name="LAST_COMMIT_MESSAGE" value="switched images from png and jpeg to webp for faster image load times, added my new project to code page" />
+    <MESSAGE value="new code typeface based font for titles of each page" />
+    <option name="LAST_COMMIT_MESSAGE" value="new code typeface based font for titles of each page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
