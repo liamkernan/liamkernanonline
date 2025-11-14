@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="new code typeface based font for titles of each page">
+    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="made title darker">
+      <change afterPath="$PROJECT_DIR$/public/art/12art.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ArtPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ArtPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +110,9 @@
       <workItem from="1760983167951" duration="2806000" />
       <workItem from="1762828393054" duration="1776000" />
       <workItem from="1762837401841" duration="11000" />
+      <workItem from="1763066533736" duration="47000" />
+      <workItem from="1763161294169" duration="571000" />
+      <workItem from="1763161876933" duration="311000" />
     </task>
     <task id="LOCAL-00001" summary="basic node.js layout with express">
       <option name="closed" value="true" />
@@ -405,14 +410,21 @@
       <option name="project" value="LOCAL" />
       <updated>1762829566899</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="made title darker">
+      <option name="closed" value="true" />
+      <created>1763066577222</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1763066577222</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new arrows and formatting" />
     <MESSAGE value="still working on art page, new organized view and formatting" />
     <MESSAGE value="new &quot;actually about me&quot; toggle pretty fun" />
     <MESSAGE value="made headers more consistent" />
@@ -437,7 +449,8 @@
     <MESSAGE value="fixing scrolling mechanic on organized art page and updated about me" />
     <MESSAGE value="switched images from png and jpeg to webp for faster image load times, added my new project to code page" />
     <MESSAGE value="new code typeface based font for titles of each page" />
-    <option name="LAST_COMMIT_MESSAGE" value="new code typeface based font for titles of each page" />
+    <MESSAGE value="made title darker" />
+    <option name="LAST_COMMIT_MESSAGE" value="made title darker" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

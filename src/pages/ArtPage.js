@@ -16,6 +16,7 @@ function ArtPage() {
     `${process.env.PUBLIC_URL}/art/9art.webp`,
     `${process.env.PUBLIC_URL}/art/10art.webp`,
     `${process.env.PUBLIC_URL}/art/11art.webp`,
+    `${process.env.PUBLIC_URL}/art/12art.webp`,
       `${process.env.PUBLIC_URL}/art/selected 1, charcoal wash on paper, 22x30, 2024.png`,
       `${process.env.PUBLIC_URL}/art/selected 2, oil on canvas, 16x20, 2024.png`
   ];
@@ -45,8 +46,9 @@ function ArtPage() {
       8: "Home Invasion",
       9: "HUNGOVER",
       10: "FOLLOW THE CROSS",
-      11: "Big Sky, Montana",
-      12: "Morgan, Utah"
+      11: 'paralysis',
+      12: "Big Sky, Montana",
+      13: "Morgan, Utah"
     };
 
     const descriptions = {
@@ -131,7 +133,7 @@ function ArtPage() {
     const { width, height } = container.getBoundingClientRect();
 
     return source.map((img) => {
-      const w = 250 + Math.random() * 150;
+      const w = 350 + Math.random() * 100;
       return {
         ...img,
         style: {
