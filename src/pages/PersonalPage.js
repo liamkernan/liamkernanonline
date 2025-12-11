@@ -16,7 +16,7 @@ function PersonalPage() {
         <h2 className="text-center google-sanscode text-8xl">me</h2>
 
         <p className="bio-text">
-        My name is Liam Kernan - I am a student at Syracuse University, a visual artist with a focus in painting, and a programmer with an interest in the safety and development of LLM models and Artificial Intelligence products.
+        My name is Liam Kernan. I am a Computer Science student at Syracuse University, with an interest in the safety and development of LLM models & Computer Vision. In my other academic interests, I'm a visual artist with a focus in painting and a creative writer.
       </p>
       
       {!showDetails && (

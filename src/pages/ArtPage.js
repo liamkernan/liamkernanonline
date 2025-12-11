@@ -389,7 +389,7 @@ function ArtPage() {
     { id: 'cycle', name: 'cycle', indices: [4, 5, 6] },
     { id: 'nightmare', name: 'nightmare', indices: [7, 8] },
     { id: 'spirituality', name: 'spirituality', indices: [9, 10] },
-    { id: 'nature', name: 'views', indices: [11, 12] }
+    { id: 'nature', name: 'views', indices: [12, 13] }
   ];
 
   const getFilteredArtworks = () => {
