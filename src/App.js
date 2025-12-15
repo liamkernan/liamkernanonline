@@ -5,6 +5,7 @@ import CodePage from './pages/CodePage';
 import ArtPage from './pages/ArtPage';
 import ProductionPage from './pages/ProductionPage';
 import PersonalPage from './pages/PersonalPage';
+import DocumentPage from './pages/DocumentPage';
 import './App.css';
 
 function App() {
@@ -22,8 +23,8 @@ function App() {
       `${process.env.PUBLIC_URL}/art/9, white charcoal on black, 19x26, 2025.jpg`,
       `${process.env.PUBLIC_URL}/art/10, acrylic on box canvas, 20x16, 2025.png`,
       `${process.env.PUBLIC_URL}/art/11, acrylic on box canvas, 20x16, 2025.png`,
-      `${process.env.PUBLIC_URL}/art/selected 1, charcoal wash on paper, 22x30, 2024.png`,
-      `${process.env.PUBLIC_URL}/art/selected 2, oil on canvas, 16x20, 2024.png`,
+      `${process.env.PUBLIC_URL}/art/selected1.png`,
+      `${process.env.PUBLIC_URL}/art/selected2.png`,
       `${process.env.PUBLIC_URL}/art/part1.png`,
       `${process.env.PUBLIC_URL}/art/part2.png`,
       `${process.env.PUBLIC_URL}/art/part3.png`,
@@ -64,6 +65,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/code" element={<CodePage />} />
         <Route path="/art" element={<ArtPage />} />
+        <Route path="/documents" element={<DocumentPage />} />
         <Route path="/production" element={<ProductionPage />} />
         <Route path="/personal" element={<PersonalPage />} />
       </Routes>

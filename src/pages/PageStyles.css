@@ -12,6 +12,7 @@
   max-width: 600px;
   line-height: 1.6;
   margin-top: 1rem;
+  color: #000;
 }
 
 .toggle-container {
@@ -40,11 +41,13 @@
   margin-top: 1rem;
   text-align: center;
   animation: fadeIn 0.4s ease-out;
+  color: #000;
 }
 
 .detailed-bio p {
   line-height: 1.6;
   margin-bottom: 1rem;
+  color: #000;
 }
 
 .detailed-bio p:last-child {

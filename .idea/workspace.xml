@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="made title darker">
-      <change afterPath="$PROJECT_DIR$/public/art/12art.webp" afterDir="false" />
+    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="updated about me and fixed art page up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ArtPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ArtPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +110,10 @@
       <workItem from="1762837401841" duration="11000" />
       <workItem from="1763066533736" duration="47000" />
       <workItem from="1763161294169" duration="571000" />
-      <workItem from="1763161876933" duration="311000" />
+      <workItem from="1763161876933" duration="566000" />
+      <workItem from="1765491713496" duration="1717000" />
+      <workItem from="1765517750949" duration="3000" />
+      <workItem from="1765517781082" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="basic node.js layout with express">
       <option name="closed" value="true" />
@@ -418,15 +419,29 @@
       <option name="project" value="LOCAL" />
       <updated>1763066577222</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="new artwork uploaded and cleaned up page in general :)">
+      <option name="closed" value="true" />
+      <created>1763162438738</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1763162438738</updated>
+    </task>
+    <task id="LOCAL-00040" summary="updated about me and fixed art page up">
+      <option name="closed" value="true" />
+      <created>1765492826707</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1765492826707</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="still working on art page, new organized view and formatting" />
-    <MESSAGE value="new &quot;actually about me&quot; toggle pretty fun" />
     <MESSAGE value="made headers more consistent" />
     <MESSAGE value="changed full screen window" />
     <MESSAGE value="more github pages stuff" />
@@ -450,7 +465,9 @@
     <MESSAGE value="switched images from png and jpeg to webp for faster image load times, added my new project to code page" />
     <MESSAGE value="new code typeface based font for titles of each page" />
     <MESSAGE value="made title darker" />
-    <option name="LAST_COMMIT_MESSAGE" value="made title darker" />
+    <MESSAGE value="new artwork uploaded and cleaned up page in general :)" />
+    <MESSAGE value="updated about me and fixed art page up" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated about me and fixed art page up" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

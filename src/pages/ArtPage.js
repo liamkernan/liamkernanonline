@@ -17,8 +17,8 @@ function ArtPage() {
     `${process.env.PUBLIC_URL}/art/10art.webp`,
     `${process.env.PUBLIC_URL}/art/11art.webp`,
     `${process.env.PUBLIC_URL}/art/12art.webp`,
-      `${process.env.PUBLIC_URL}/art/selected 1, charcoal wash on paper, 22x30, 2024.png`,
-      `${process.env.PUBLIC_URL}/art/selected 2, oil on canvas, 16x20, 2024.png`
+      `${process.env.PUBLIC_URL}/art/selected1.png`,
+      `${process.env.PUBLIC_URL}/art/selected2.png`
   ];
 
   const ART_PAIR_FILES = [

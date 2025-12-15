@@ -16,13 +16,13 @@ function PersonalPage() {
         <h2 className="text-center google-sanscode text-8xl">me</h2>
 
         <p className="bio-text">
-        My name is Liam Kernan. I am a Computer Science student at Syracuse University, with an interest in the safety and development of LLM models & Computer Vision. In my other academic interests, I'm a visual artist with a focus in painting and a creative writer.
+        My name is Liam Kernan. I am a Computer Science student at Syracuse University, with an interest in the safety and development of LLM models & Computer Vision. I believe full transparency of who I am is the best way to present myself and my work. Thus, this website is a collection of all the academic work I've completed that I'm proud of; regardless of discipline or relation to my major.
       </p>
       
       {!showDetails && (
         <div className="toggle-container">
           <button className="toggle-button" onClick={toggleDetails}>
-            Actually About Me
+            really about me
           </button>
         </div>
       )}
@@ -33,10 +33,10 @@ function PersonalPage() {
               In my free time, I love to ski more then anything else; I've been on trips out to Utah, Montana, California, Vermont, and I ski my local PA mountains almost everyday during the season (still working on my backflip). Powder Mountain is the best resort in the country, no debate.
           </p>
           <p>
-             I'm a huge audiophile; its something that my best friend got me into and I've been loving it since. For my home setup, I have a pair of passive Polk ES15s and a Airmotiv SE8 sub driven through a Sony STR-DH190 and a Schiit Modi 3. I taught myself how to play keyboard and guitar, working on the latter right now.
+             I'm huge into audio; its something that my best friend got me into and I've been loving it since. For my home setup, I have a pair of passive Polk ES15s and a Airmotiv SE8 sub driven through a Sony STR-DH190 and a Schiit Modi 3. I taught myself how to play keyboard and guitar, working on the latter right now.
           </p>
           <p>
-            In the summer, I lifeguard religiously; I love to swim and I remember looking up to the lifeguards at my public pool as a kid, so it feels great to maybe be that to a kid like me. I've worked at 4 pools and am the lifeguard manager at my current pool.
+            In the summer, I lifeguard religiously; I love to swim and I remember looking up to the lifeguards at my public pool as a kid. It feels great to maybe be that to a kid like me. I've worked at 4 pools and am the lifeguard manager at my current pool.
           </p>
         </div>
       )}
