@@ -11,7 +11,7 @@ const projects = [
     description: "A web application that uses AI to generate (and score) endless practice questions for everything"
   },
   {
-    title: "March Madness",
+    title: "MarchMadness",
     repo: "https://github.com/liamkernan/MarchMadness",
     description: "Console-based Java program that predicts NCAA March Madness outcomes based on past stats"
   },
