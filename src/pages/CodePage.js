@@ -39,7 +39,7 @@ function CodePage() {
       <div className="projects-grid">
         {projects.map((project) => (
           <div key={project.title} className="project-card">
-            <h3 className="project-title">{project.title}</h3>
+            <h3 className="project-title" data-mobile-title={project.title === "MarchMadness" ? "M.M" : null}>{project.title}</h3>
             <div className="project-content">
               <p className="project-description">{project.description}</p>
             </div>

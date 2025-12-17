@@ -70,6 +70,17 @@
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .project-title[data-mobile-title] {
+    font-size: 0;
+  }
+  
+  .project-title[data-mobile-title]::before {
+    content: attr(data-mobile-title);
+    font-size: 1.7rem;
+  }
+}
+
 .project-content {
   flex: 1;
   display: flex;
