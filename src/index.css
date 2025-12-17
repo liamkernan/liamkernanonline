@@ -24,13 +24,16 @@
   @media (max-width: 768px) {
     html {
       min-height: 100vh;
+      height: auto;
     }
     
     body {
       min-height: 100vh;
+      height: auto;
       background-attachment: scroll;
-      background-size: 100% 500vh;
+      background-size: 100% 1000vh;
       background-repeat: no-repeat;
+      background-position: top;
     }
   }
 

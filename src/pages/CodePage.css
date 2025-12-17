@@ -18,6 +18,12 @@
   margin-top: 2rem;
 }
 
+@media (max-width: 768px) {
+  .projects-grid {
+    padding-top: 4rem;
+  }
+}
+
 .project-card {
   display: flex;
   flex-direction: column;
