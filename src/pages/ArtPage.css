@@ -167,8 +167,7 @@
   min-height: 200vh;
   overflow-y: auto;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  background-size: 100% 100vh;
-  background-repeat: repeat-y;
+  background-attachment: fixed;
   padding: 12rem 2rem 2rem 2rem;
 }
 

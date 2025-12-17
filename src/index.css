@@ -5,7 +5,8 @@
 @layer base {
   html,
   body {
-    height: 100%;
+    min-height: 100%;
+    height: auto;
   }
 
   body {
@@ -16,6 +17,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: linear-gradient(135deg, #ffffff 0%, #dfe9ff 100%);
+    background-attachment: fixed;
   }
 
   code {
