@@ -11,13 +11,18 @@ const projects = [
     description: "A web application that uses AI to generate (and score) endless practice questions for everything"
   },
   {
+    title: "CARESS",
+    repo: "https://github.com/liamkernan/caress-your-music",
+    description: "Hand tracking script that allows user to control Spotify playback with hand gestures"
+  },
+  {
     title: "MarchMadness",
     repo: "https://github.com/liamkernan/MarchMadness",
     description: "Console-based Java program that predicts NCAA March Madness outcomes based on past stats"
   },
     {
         title: "Conduct",
-        description: "Localized LLM to provide law firms & practicing attorneys a secure portal to AI.",
+        description: "Localized LLM to provide law firms & practicing attorneys a secure portal to AI",
     },
     {
         title: "Small Projects",
