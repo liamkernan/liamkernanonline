@@ -100,7 +100,6 @@ function ArtPage() {
   const [panStart, setPanStart] = useState({ x: 0, y: 0 });
   const [selectedFilter, setSelectedFilter] = useState('all');
   const [isFilterBarVisible, setIsFilterBarVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
   const groupings = [
     [0, 1],
