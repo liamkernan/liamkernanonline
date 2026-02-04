@@ -160,15 +160,16 @@
 }
 
 .organized-view {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  min-height: 200vh;
+  height: 100vh;
   overflow-y: auto;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   background-attachment: fixed;
   padding: 12rem 2rem 2rem 2rem;
+  box-sizing: border-box;
 }
 
 .filter-bar {

@@ -182,7 +182,7 @@ function DocumentPage() {
   return (
     <div className="page-container">
       <BackButton />
-      <h2 className="text-center google-sanscode text-8xl">essays</h2>
+      <h2 className="text-center google-sanscode text-8xl">writing</h2>
       
       <div className="essays-grid">
         {essays.map((essay) => (

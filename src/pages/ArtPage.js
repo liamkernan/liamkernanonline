@@ -36,11 +36,11 @@ function ArtPage() {
 
     const titles = {
       0: "remains of true beauty still exist in what we have castrated",
-      1: "the true beauty in question",
+      1: "the true beauty exists outside the garden",
       2: "the widow",
       3: "her everything",
       4: "beginning of life;",
-      5: "vision board;",
+      5: "life vision board;",
       6: "conclusion of life;",
       7: "Imposter",
       8: "Home Invasion",
@@ -52,7 +52,7 @@ function ArtPage() {
     };
 
     const descriptions = {
-      0: "This is the first piece in my Sleep & Dreams series, that I started back in August, and completely overhauled in December when I had more clarity on what I wanted my series to represent.  While this piece was challenging to complete and took me longer then it probably should have, i'm glad I completed it, because it gave me so much clarity on what I want to make and how I want to go about pairs in the future. In terms of the theme, this one falls on the \"dream\" side. I tried to blend surrealist elements and application with a realistic and typically uneventful scene, to make a piece that you could stare at endlessly and still have questions. It's a fun challange to use no refrences and completely conjure your peice from your imgination. It can hurt the proportions, sure, but I really think it adds a unreplicatable and personal touch to the whole piece. Like the fact this place, or the form of any of these objects, does not exist anywhere in the real world. I should probably explain why the figures and giraffe are blacked out. Its meant to represent how when you try to think back and remember a dream, there are always aspects of your dreams that feel like they're incomplete or missing. That aspect - the part that just doesn't quite make sense - is seemingly a constant in everyones dreams. The figure laying on the ground is having a heat stroke from the oppresive and vsicreal sky above him. I wanted this peice to just feel off in a way that only a bizzare dream could. I think I could've added more detail to the building in the background, and the proportions of the cage could have been planned better, but overall im very happy with this piece, and the tone it sets for my sustained investigation.",
+      0: "This is the first piece in my Sleep & Dreams series, that I started back in August, and completely overhauled in December when I had more clarity on what I wanted my series to represent.  While this piece was challenging to complete and took me longer then it probably should have, i'm glad I completed it, because it gave me so much clarity on what I want to make and how I want to go about pairs in the future. In terms of the theme, this one falls on the \"dream\" side. I tried to blend surrealist elements and application with a realistic and typically uneventful scene, to make a piece that you could stare at endlessly and still have questions. It's a fun challange to use no refrences and completely conjure your peice from your imgination. It can hurt the proportions, sure, but I really think it adds a unreplicatable and personal touch to the whole piece. Like the fact this place, or the form of any of these objects, does not exist anywhere in the real world. I should probably explain why the figures and giraffe are blacked out. Its meant to represent how when you try to think back and remember a dream, there are always aspects of your dreams that feel like they're incomplete or missing. That aspect - the part that just doesn't quite make sense - is seemingly a constant in everyones dreams. The figure laying on the ground is having a heat stroke from the oppresive and vsicreal sky above him. I wanted this peice to just feel off in a way that only a bizzare dream could. ",
       1: "This piece the counterpart to my first sustained, forming the first \"pair\" in my series of pairs. With this project I wanted to take the color palette and general aesthetic of the first piece, but fully focus on a more realistic and delicate scenery to juxtapose the stranger and more unrelenting of the first. I'm really happy with how the lines of color form the ground at the bottom of the piece, and the shifts in color and warmth. The upper portion of the trees was initially a challenger, because I wasn't sure how bold I wanted to go on the color, but i'm very happy with how they came out and stand against the paler lower portion of the sky. Speaking on the sky, I intially had a much more saturated and vertically-blending sky, but I changed this to be radially-blending and have a more gradual and less agressive pallete (esapically towards the bottom). I think this goes a long way in making the piece feel less overwhelming, and highlights the centered tree's color.",
       2: "I think this is the piece that really made the goal of my sustained investigation click for me. Up until this piece, I was struggling to find a strong source of inspiration for my groupings of paintings, but the creation of this one really made everything click, and now i'm overwhelmed with ideas. With this one, I set out to make a peice that was bold and dramatic in its contrast between warm and dark. The way the women is obscured in darkness, drowning in blues and purples, while the warmth is pulling away from her, leaving behind a trail of yellows and oranges, is one of my favorite color contrasts ive ever done. The women's shadow leaves behind the subtle distinction of a former partner, connected to the women metaphorically, while she's turned away . The bed seems to stretch endlessly where someone once lied, signifgifying the hole and emptiness that loss can have. I could keep explaining all of the subtleties and my intentions behind the story of this piece, but I dont want to force a story if you see something different. Regardless, I'm very proud of everything ive done here, and it was nice to take a break and use acrylics. I want to do more pieces with a bold contrast like this for sure.",
       3: "Dramatic use of charcoal wash creates depth and movement.",
@@ -61,8 +61,8 @@ function ArtPage() {
       6: "This third piece in my tryptic is a mini-series of sorts within my broader sustained investigation, sleep & dreams. I wanted to depict sleep at the beginning of life, sleep at the end of life, and then curate a collage of contrasting “dreams” within one piece to show the overlap and similarities of dreams (and nightmares) across your life. All three are meant to be viewed together as one, and are sort of the exception to my rule of pairs. However, I think they can still be appreciated independently. I'm really happy with how this came together. I'm particularly happy with the form of the pastel portraits, and the colored-pencil collage piece in the middle is one of my favorite dream sequences i've done. I'm going to make the warm tones in the end of life piece more distinct, and make the collage more dense, but I think this will serve as another interesting perspective on the relationship of dreams and sleep.",
       7: "I feel like this duo is easily my most morbid and dark yet. Stylistically, it felt like a total departure from my typically very colorful and saturated style, which is a change im very glad I made for two reasons. One, it gives my portfolio more variety, and two, it feel like a more comprehensive outlook on the relationship between sleep and dreams for a larger variety of people. I think it's important to fully recognize concepts and not only include the \"good\", and in this context that means recognizing nightmares and paralysis. I think I can still improve some aspects of the perspective, but overall I understand the strength of this piece is the reaction it elicits and im trying to capitalize on that.",
       8: "I feel like this duo is easily my most morbid and dark yet. Stylistically, it felt like a total departure from my typically very colorful and saturated style, which is a change im very glad I made for two reasons. One, it gives my portfolio more variety, and two, it feel like a more comprehensive outlook on the relationship between sleep and dreams for a larger variety of people. I think it's important to fully recognize concepts and not only include the \"good\", and in this context that means recognizing nightmares and paralysis. Im really happy with the composition and uncomfortable aire that floats in this one, but im definitely gonna take steps to improve the detail and quality of drawing.",
-      9: "",
-      10: "",
+      9: "no statement",
+      10: "no statement",
     };
     
     return {
@@ -221,18 +221,23 @@ function ArtPage() {
   }, []);
 
   useEffect(() => {
-    if (!isPairView || !organizedViewRef.current) return;
+    if (!isPairView) return;
 
+    let lastScroll = 0;
+    
     const handleScroll = () => {
-      const currentScrollY = organizedViewRef.current.scrollTop;
+      const organizedView = organizedViewRef.current;
+      if (!organizedView) return;
       
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      const currentScrollY = organizedView.scrollTop;
+      
+      if (currentScrollY > lastScroll && currentScrollY > 100) {
         setIsFilterBarVisible(false);
-      } else if (currentScrollY < lastScrollY || currentScrollY <= 50) {
+      } else if (currentScrollY < lastScroll || currentScrollY <= 50) {
         setIsFilterBarVisible(true);
       }
       
-      setLastScrollY(currentScrollY);
+      lastScroll = currentScrollY;
     };
 
     const organizedView = organizedViewRef.current;
@@ -242,7 +247,7 @@ function ArtPage() {
         organizedView.removeEventListener('scroll', handleScroll);
       };
     }
-  }, [lastScrollY, isPairView]);
+  }, [isPairView]);
 
 
   const toggleView = () => {
@@ -443,12 +448,14 @@ function ArtPage() {
                     <p className="artwork-description">{artwork.description}</p>
                   )}
                 </div>
-                <button 
-                  className="show-pair-button"
-                  onClick={() => showPairImage(index)}
-                >
-                  Show Pair
-                </button>
+                {artwork.title !== 'paralysis' && (
+                  <button 
+                    className="show-pair-button"
+                    onClick={() => showPairImage(index)}
+                  >
+                    Show Pair
+                  </button>
+                )}
               </div>
             </div>
           ))}
