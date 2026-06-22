@@ -16,9 +16,9 @@ const projects = [
     description: "Hand tracking script that allows user to control Spotify playback with hand gestures"
   },
   {
-    title: "MarchMadness",
-    repo: "https://github.com/liamkernan/MarchMadness",
-    description: "Console-based Java program that predicts NCAA March Madness outcomes based on past stats"
+    title: "Mosaic",
+    repo: "https://github.com/liamkernan/mosaic",
+    description: "GitHub-connected feedback intake that collects requests from web, email, Slack, Discord, and GitHub, triages them, and turns safe, well-scoped items into validated PRs or staged issues"
   },
     {
         title: "Conduct",
