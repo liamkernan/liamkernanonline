@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="updated about me and fixed art page up">
-      <change beforePath="$PROJECT_DIR$/src/pages/CodePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CodePage.js" afterDir="false" />
-    </list>
+    <list default="true" id="67c55ff0-393b-4474-89d0-37ecdfc03723" name="Changes" comment="added mosaic data" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,7 +122,7 @@
       <workItem from="1765517750949" duration="3000" />
       <workItem from="1765517781082" duration="4000" />
       <workItem from="1765998091617" duration="11000" />
-      <workItem from="1782159013784" duration="518000" />
+      <workItem from="1782159013784" duration="537000" />
     </task>
     <task id="LOCAL-00001" summary="basic node.js layout with express">
       <option name="closed" value="true" />
@@ -446,14 +444,21 @@
       <option name="project" value="LOCAL" />
       <updated>1765492826707</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="added mosaic data">
+      <option name="closed" value="true" />
+      <created>1782159545611</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1782159545611</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="made headers more consistent" />
     <MESSAGE value="changed full screen window" />
     <MESSAGE value="more github pages stuff" />
     <MESSAGE value="test test" />
@@ -478,7 +483,8 @@
     <MESSAGE value="made title darker" />
     <MESSAGE value="new artwork uploaded and cleaned up page in general :)" />
     <MESSAGE value="updated about me and fixed art page up" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated about me and fixed art page up" />
+    <MESSAGE value="added mosaic data" />
+    <option name="LAST_COMMIT_MESSAGE" value="added mosaic data" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
