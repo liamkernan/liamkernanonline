@@ -7,7 +7,7 @@ const projects = [
   {
     title: "(helpstudy.me)",
     repo: "https://github.com/liamkernan/HELPSTUDYME",
-    live: "https://helpstudy.me",
+    //live: "https://helpstudy.me",
     description:
       "A web application that uses AI to generate (and score) endless practice questions for everything",
   },
