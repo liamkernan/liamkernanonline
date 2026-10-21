@@ -9,6 +9,7 @@ const CLOSE_MS = 550;
 let opened = null;
 let returned = null;
 let settleRoute = null;
+let navigated = false;
 
 export const prefersReducedMotion = () =>
   window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
@@ -46,7 +47,7 @@ export function openFrom(navigate, to, origin) {
   transition('open', navigate, to, () =>
     document.documentElement.animate(
       { clipPath: [circle(0, origin), circle(coverRadius(origin), origin)] },
-      { duration: OPEN_MS, easing: EASE, pseudoElement: '::view-transition-new(root)' }
+      { duration: OPEN_MS, easing: EASE, fill: 'forwards', pseudoElement: '::view-transition-new(root)' }
     )
   );
 }
@@ -66,7 +67,8 @@ export function closeTo(navigate, to) {
   transition('close', navigate, to, () =>
     document.documentElement.animate(
       { clipPath: [circle(coverRadius(origin), origin), circle(0, origin)] },
-      { duration: CLOSE_MS, easing: EASE, pseudoElement: '::view-transition-old(root)' }
+      // Hold the closed circle until the transition tears down, or the old page flashes back for a frame.
+      { duration: CLOSE_MS, easing: EASE, fill: 'forwards', pseudoElement: '::view-transition-old(root)' }
     )
   );
 }
@@ -76,10 +78,14 @@ export function recentReturn() {
   return returned && Date.now() - returned.at < 1500 ? returned.to : null;
 }
 
+// Whether the visitor has moved between pages yet, so first-load-only effects stay that way.
+export const hasNavigated = () => navigated;
+
 // Lets a pending view transition know the new route has been committed to the DOM.
 export function RouteSettle() {
   const location = useLocation();
   useLayoutEffect(() => {
+    if (location.key !== 'default') navigated = true;
     settleRoute?.();
     settleRoute = null;
   }, [location]);

@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { prefersReducedMotion } from '../transitions';
+import { hasNavigated, prefersReducedMotion } from '../transitions';
 import './MorphName.css';
 
 const NAME = 'Liam Kernan';
@@ -31,7 +31,7 @@ NAME.split(' ').reduce((start, word) => {
   return start + word.length + 1;
 }, 0);
 
-// Decode the name in once per page load, not every time someone comes back to the landing page.
+// Decode the name in only when the landing page is the first thing someone sees, and only once.
 let introPlayed = false;
 
 const base = (i) => ({ glyph: NAME[i], style: null });
@@ -105,7 +105,7 @@ function MorphName({ className = '' }) {
 
   useEffect(() => {
     FONT_WARMUPS.forEach(([font, text]) => document.fonts?.load(font, text).catch(() => {}));
-    if (introPlayed || prefersReducedMotion()) return undefined;
+    if (introPlayed || hasNavigated() || prefersReducedMotion()) return undefined;
 
     setChars(NAME.split('').map((c, i) => (c === ' ' ? base(i) : noise())));
     NAME.split('').forEach((c, i) => {
