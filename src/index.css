@@ -90,3 +90,21 @@
     text-decoration: none;
   }
 }
+
+/* Page transitions: transitions.js drives the circular open/close with clip-path. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.3s;
+}
+
+html[data-transition="open"]::view-transition-old(root),
+html[data-transition="open"]::view-transition-new(root),
+html[data-transition="close"]::view-transition-old(root),
+html[data-transition="close"]::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+html[data-transition="close"]::view-transition-old(root) {
+  z-index: 1;
+}

@@ -6,6 +6,7 @@ import ArtPage from './pages/ArtPage';
 import ProductionPage from './pages/ProductionPage';
 import PersonalPage from './pages/PersonalPage';
 import DocumentPage from './pages/DocumentPage';
+import { RouteSettle } from './transitions';
 import './App.css';
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
 
   return (
     <Router>
+      <RouteSettle />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/code" element={<CodePage />} />

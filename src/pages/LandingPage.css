@@ -39,6 +39,7 @@
 }
 
 .nav-button {
+  position: relative;
   text-decoration: none;
   color: #3a3a3a;
   border: none;
@@ -50,17 +51,235 @@
   padding: 1rem;
   border-radius: 12px;
   transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav-icon {
   width: 48px;
   height: 48px;
+  overflow: visible;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.nav-icon * {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .nav-button:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: scale(1.05);
   text-decoration: none;
+}
+
+.nav-button:active {
+  transform: scale(0.94);
+}
+
+/* Section name that types itself out under the icon on hover */
+.nav-label {
+  position: absolute;
+  top: calc(100% - 0.4rem);
+  left: 50%;
+  margin-left: calc(var(--chars) * -0.5ch);
+  display: flex;
+  align-items: center;
+  font-family: "Google Sans Code", monospace;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1;
+  color: #888888;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.nav-label-text {
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.nav-label::after {
+  content: "";
+  width: 1px;
+  height: 1em;
+  margin-left: 2px;
+  background: currentColor;
+  animation: caret-blink 1s steps(1) infinite;
+}
+
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (hover: hover) {
+  .nav-button:hover .nav-label {
+    opacity: 1;
+  }
+
+  .nav-button:hover .nav-label-text {
+    width: calc(var(--chars) * 1ch + 0.1em);
+    transition: width calc(var(--chars) * 55ms) steps(var(--chars), end) 0.08s;
+  }
+
+  .nav-code:hover .code-bracket-l {
+    transform: translateX(-1.5px);
+  }
+
+  .nav-code:hover .code-bracket-r {
+    transform: translateX(1.5px);
+  }
+
+  .nav-art:hover .nav-icon {
+    transform: rotate(-10deg);
+  }
+
+  .nav-writing:hover .nav-icon {
+    transform: translateY(-2px) rotate(-4deg);
+  }
+
+  .nav-me:hover .me-head {
+    transform: translateY(-1.5px);
+  }
+}
+
+/* Clicking: the button presses in, does its own little thing, and the page opens out of it. */
+.landing-container.is-leaving .site-title,
+.landing-container.is-leaving .nav-button:not(.is-launching),
+.landing-container.is-leaving .social-buttons {
+  opacity: 0;
+  filter: blur(6px);
+  transition: opacity 0.35s ease, filter 0.35s ease;
+}
+
+.nav-button.is-launching {
+  animation: nav-press 0.42s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes nav-press {
+  0% { transform: scale(1.05); }
+  25% { transform: scale(0.9); }
+  100% { transform: scale(1.12); }
+}
+
+/* code: brackets squeeze, the slash straightens into a blinking caret */
+.nav-code.is-launching .code-bracket-l {
+  animation: code-bracket-l 0.42s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.nav-code.is-launching .code-bracket-r {
+  animation: code-bracket-r 0.42s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.nav-code.is-launching .code-slash {
+  animation: code-caret 0.42s both;
+}
+
+@keyframes code-bracket-l {
+  0% { transform: translateX(-1.5px); }
+  30% { transform: translateX(1px); }
+  100% { transform: translateX(-2.5px); }
+}
+
+@keyframes code-bracket-r {
+  0% { transform: translateX(1.5px); }
+  30% { transform: translateX(-1px); }
+  100% { transform: translateX(2.5px); }
+}
+
+@keyframes code-caret {
+  0% { transform: rotate(0); animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1); }
+  35% { transform: rotate(-17deg); opacity: 1; animation-timing-function: steps(1, end); }
+  55% { transform: rotate(-17deg); opacity: 0; animation-timing-function: steps(1, end); }
+  75% { transform: rotate(-17deg); opacity: 1; animation-timing-function: steps(1, end); }
+  90% { transform: rotate(-17deg); opacity: 0; animation-timing-function: steps(1, end); }
+  100% { transform: rotate(-17deg); opacity: 1; }
+}
+
+/* art: the palette swings and its paint flicks off */
+.nav-art.is-launching .nav-icon {
+  animation: art-swing 0.42s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.nav-art.is-launching .art-dot {
+  animation: art-flick 0.42s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes art-swing {
+  0% { transform: rotate(-10deg); }
+  40% { transform: rotate(14deg); }
+  100% { transform: rotate(0); }
+}
+
+@keyframes art-flick {
+  0% { transform: none; }
+  45% { transform: translate(var(--dx), var(--dy)) scale(2.4); opacity: 1; }
+  100% { transform: translate(calc(var(--dx) * 2), calc(var(--dy) * 2)) scale(0.8); opacity: 0; }
+}
+
+/* writing: the page lifts and its lines get written in */
+.nav-writing.is-launching .nav-icon {
+  animation: doc-lift 0.42s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.nav-writing.is-launching .doc-line {
+  stroke-dasharray: 1 2;
+  animation: doc-write 0.16s ease-out both;
+  animation-delay: calc(var(--i) * 85ms + 40ms);
+}
+
+@keyframes doc-lift {
+  0% { transform: translateY(-2px) rotate(-4deg); }
+  50% { transform: translateY(-4px) rotate(3deg); }
+  100% { transform: none; }
+}
+
+@keyframes doc-write {
+  0% { stroke-dashoffset: 1; opacity: 0; }
+  1% { opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+/* me: a little hop */
+.nav-me.is-launching .me-head {
+  animation: me-hop 0.42s both;
+}
+
+.nav-me.is-launching .me-body {
+  transform-origin: 50% 100%;
+  animation: me-squash 0.42s both;
+}
+
+@keyframes me-hop {
+  0% { transform: translateY(-1.5px); }
+  20% { transform: translateY(0.5px); animation-timing-function: cubic-bezier(0.2, 0.8, 0.4, 1); }
+  55% { transform: translateY(-4px); animation-timing-function: cubic-bezier(0.6, 0, 0.8, 0.4); }
+  85% { transform: translateY(0); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes me-squash {
+  0% { transform: none; }
+  20% { transform: scale(1.08, 0.85); }
+  50% { transform: scale(0.95, 1.05); }
+  85% { transform: scale(1.05, 0.92); }
+  100% { transform: none; }
+}
+
+/* Coming back, the icon the page folded into settles back to size */
+.nav-button.is-returning .nav-icon {
+  animation: nav-settle 0.5s 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+}
+
+@keyframes nav-settle {
+  0% { transform: scale(0.8); }
+  60% { transform: scale(1.08); }
+  100% { transform: none; }
 }
 
 @media (max-width: 768px) {
@@ -124,3 +343,13 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .nav-icon,
+  .nav-icon * {
+    transition: none;
+  }
+
+  .nav-button.is-returning .nav-icon {
+    animation: none;
+  }
+}
